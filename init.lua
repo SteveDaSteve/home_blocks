@@ -22,8 +22,8 @@ minetest.register_craft({
 })
 
 minetest.register_abm({
-		label = "Tablecloth Burning"
-		neighbors = "fire:basic_flame"
+		label = "Tablecloth Burning",
+		neighbors = "fire:basic_flame",
 		nodenames = {"home_blocks:covered_stone"},
 		neighbors = {"fire:basic_flame", "fire:permanent_flame"},
 		interval = 5,
