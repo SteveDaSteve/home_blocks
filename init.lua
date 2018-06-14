@@ -19,4 +19,14 @@ minetest.register_craft({
         {"group:wool"},
         {"default:stone"},
 			}
-    })
+})
+
+minetest.register_abm({
+		nodenames = {"testmod:covered_stone"},
+		neighbors = {"fire:basic_flame"},
+		interval = 5,
+		chance = 5,
+		action = function(pos, node, active_object_count, active_object_count_wider)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "default:stone"})
+	end
+})
