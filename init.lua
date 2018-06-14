@@ -1,5 +1,5 @@
 minetest.register_node("testmod:covered_stone",{
-		descrption = "Stone Table",
+		description = "Stone Table",
 		tiles = {
 			"testmod_stone_table_top.png",
 			"default_stone.png",
