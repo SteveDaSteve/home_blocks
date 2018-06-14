@@ -5,6 +5,7 @@ My first mod, for adding decorative (and possibly functional) blocks to minetest
 
 -Adds a stone node with cloth on it.
     -To craft:
+ (Placed in this shape anywhere)
       [] [wool group]  []
       [] [stone group] []
       []       []      []
