@@ -1,20 +1,20 @@
-minetest.register_node("testmod:covered_stone",{
+minetest.register_node("home_blocks:covered_stone",{
 		description = "Stone Table",
 		tiles = {
-			"testmod_stone_table_top.png",
+			"home_blocks_stone_table_top.png",
 			"default_stone.png",
-			"testmod_stone_table_side.png",
-			"testmod_stone_table_side.png",
-			"testmod_stone_table_side.png",
-			"testmod_stone_table_side.png",
+			"home_blocks_stone_table_side.png",
+			"home_blocks_stone_table_side.png",
+			"home_blocks_stone_table_side.png",
+			"home_blocks_stone_table_side.png",
 },
 		is_ground_content = false,
 		groups = {cracky = 2, stone = 1, flamable = 1},
-		drops = "testmod:covered_stone"
+		drops = "home_blocks:covered_stone"
 })
 
 minetest.register_craft({
-    output = "testmod:covered_stone",
+    output = "home_blocks:covered_stone",
     recipe = {
         {"group:wool"},
         {"group:stone"},
@@ -24,7 +24,7 @@ minetest.register_craft({
 minetest.register_abm({
 		label = "Tablecloth Burning"
 		neighbors = "fire:basic_flame"
-		nodenames = {"testmod:covered_stone"},
+		nodenames = {"home_blocks:covered_stone"},
 		neighbors = {"fire:basic_flame", "fire:permanent_flame"},
 		interval = 5,
 		chance = 5,
