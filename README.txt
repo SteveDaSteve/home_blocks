@@ -1,18 +1,13 @@
           Minetest Home Blocks Mod
 -------------------------------------------
 My first mod, for adding decorative (and possibly functional) blocks to minetest.
-          Inspired by xdecor
+          -Inspired by xdecor-
+	  
+More detailed information about the mod, including crafting resipes, 
+can be found on the wiki tab from this link:
+https://github.com/SteveDaSteve/home_blocks/wiki
 
--Stone node with cloth on it.
-    -To craft:
- (Placed in this shape anywhere)
-      [] [wool group]  []
-      [] [stone group] []
-      []       []      []
-More blocks to come for your home and decoration
-
--Hanging lightbulb x4
-(Placed in this shape anywhere)
-		[]	[glass]					[]
-		[]	[mese fragment]	[]
-		[]	[group:stone]		[]
+This mod includes:
+- Stone tables (Stone with a tablecloth)
+- Lightbulbs (Give off light)
+More soon to come.
