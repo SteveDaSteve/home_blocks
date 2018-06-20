@@ -24,8 +24,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:light_fixture",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
-		walkable = false
-		light_source = 10
+		walkable = false,
+		light_source = 10,
 		tiles = {"testmod_lightbulb.png"},
 		is_ground_content = false,
 		groups = {oddly_breakable_by_hand = 1},
