@@ -24,7 +24,7 @@ minetest.register_craft({
 minetest.register_node("home_blocks:lightbulb",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
-		inventory_image = "testmod_lightbulb.png"
+		inventory_image = "testmod_lightbulb.png",
 		walkable = false,
 		tiles = {"testmod_lightbulb.png"},
 		is_ground_content = false,
@@ -38,7 +38,7 @@ minetest.register_node("home_blocks:lightbulb",{
 minetest.register_node("home_blocks:lightbulb_lit",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
-		inventory_image = "testmod_lightbulb_lit.png"
+		inventory_image = "testmod_lightbulb_lit.png",
 		walkable = false,
 		light_source = 10,
 		tiles = {"testmod_lightbulb_lit.png"},
