@@ -24,6 +24,7 @@ minetest.register_craft({
 minetest.register_node("home_blocks:light_fixture",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
+		inventory_image = "testmod_lightbulb.png"
 		walkable = false,
 		light_source = 10,
 		tiles = {"testmod_lightbulb.png"},
