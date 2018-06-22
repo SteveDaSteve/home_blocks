@@ -59,15 +59,15 @@ minetest.register_craft({
 			}
 })
 
-minetest.register_node("home_blocks:Crate", {
+minetest.register_node("home_blocks:crate", {
 	description = 'Wooden Crate',
 	tiles = {"home_blocks_crate.png"},
 	groups = {choppy = 1},
-	drops = "home_blocks:Crate",
+	drops = "home_blocks:crate",
 })
 
 minetest.register_craft({
-	output = "home_blocks:Crate",
+	output = "home_blocks:crate",
 	recipe = {
 		{"group:wood"}, {}, {"group:wood"},
 		{}, {"group:wood"}, {},
