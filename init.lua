@@ -77,7 +77,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:clay_pot", {
 	description = "Clay Pot",
-	inventory_image = "home_blocks_clay_pot.png"
+	inventory_image = "home_blocks_clay_pot.png",
 	drawtype = "plantlike",
 	tiles = {"home_blocks_clay_pot.png"},
 	sunlight_propagates = true
