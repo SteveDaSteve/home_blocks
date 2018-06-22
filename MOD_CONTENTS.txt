@@ -1,0 +1,6 @@
+Home_blocks Contents
+------------------------
+Nodes:
+- Stone Tables
+- Lightbulbs
+- Wooden Crates
