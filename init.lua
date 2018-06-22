@@ -31,7 +31,7 @@ minetest.register_node("home_blocks:lightbulb",{
 		groups = {oddly_breakable_by_hand = 1},
 		drops = "home_blocks:lightbulb",
 		on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-			minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb"})
+			minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb_lit"})
 				end
 })
 
