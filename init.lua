@@ -80,7 +80,7 @@ minetest.register_node("home_blocks:clay_pot", {
 	inventory_image = "home_blocks_clay_pot.png",
 	drawtype = "plantlike",
 	tiles = {"home_blocks_clay_pot.png"},
-	sunlight_propagates = true
+	sunlight_propagates = true,
 	groups = {cracky = 1, oddly_breakable_by_hand = 1},
 	drop = "home_blocks:clay_pot"
 })
