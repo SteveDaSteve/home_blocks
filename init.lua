@@ -36,7 +36,7 @@ minetest.register_node("home_blocks:lightbulb",{
 })
 
 minetest.register_node("home_blocks:lightbulb_lit",{
-		description = "Light Bulb",
+		description = "Light Bulb (Lit)",
 		drawtype = "plantlike",
 		inventory_image = "testmod_lightbulb_lit.png",
 		walkable = false,
