@@ -31,7 +31,7 @@ minetest.register_node("home_blocks:lightbulb",{
 		groups = {oddly_breakable_by_hand = 1},
 		drops = "home_blocks:lightbulb",
 		on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-			set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb_lit"})
+			minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb"})
 				end
 })
 
@@ -43,10 +43,10 @@ minetest.register_node("home_blocks:lightbulb_lit",{
 		light_source = 10,
 		tiles = {"testmod_lightbulb_lit.png"},
 		is_ground_content = false,
-		groups = {oddly_breakable_by_hand = 1, not_in_creative_inventory},
+		groups = {oddly_breakable_by_hand = 1, not_in_creative_inventory = 1},
 		drops = "home_blocks:lightbulb",
 		on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-			set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb"})
+			minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "home_blocks:lightbulb"})
 				end
 })
 
