@@ -74,3 +74,18 @@ minetest.register_craft({
 		{"group:wood", "", "group:wood"} 
 	}
 })
+
+minetest.register_node("home_blocks:clay_pot", {
+	description = "Clay Pot",
+	drawtype = "plantlike",
+	tiles = {"home_blocks_clay_pot.png"},
+	groups = {cracky = 1, oddly_breakable_by_hand = 1},
+	drops = "home_blocks:clay_pot"
+})
+
+minetest.register_craft({
+	output = "home_blocks:clay_pot 3",
+	recipe = {
+		{"default:clay_lump"}
+	}
+})
