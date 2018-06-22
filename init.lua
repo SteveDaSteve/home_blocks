@@ -51,7 +51,7 @@ minetest.register_node("home_blocks:lightbulb_lit",{
 })
 
 minetest.register_craft({
-    output = "home_blocks:light_fixture 4",
+    output = "home_blocks:lightbulb 4",
     recipe = {
         {"default:glass"},
         {"default:mese_crystal_fragment"},
@@ -67,10 +67,10 @@ minetest.register_node("home_blocks:crate", {
 })
 
 minetest.register_craft({
-	output = "home_blocks:crate",
+	output = "home_blocks:crate 2",
 	recipe = {
-		{"group:wood"}, {}, {"group:wood"},
-		{}, {"group:wood"}, {},
-		{"group:wood"}, {}, {"group:wood"} 
+		{"group:wood", "group:wood"},
+		{"group:wood"},
+		{"group:wood", "group:wood"} 
 	}
 })
