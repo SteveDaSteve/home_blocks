@@ -69,8 +69,8 @@ minetest.register_node("home_blocks:crate", {
 minetest.register_craft({
 	output = "home_blocks:crate 2",
 	recipe = {
-		{"group:wood", "group:wood"},
-		{"group:wood"},
-		{"group:wood", "group:wood"} 
+		{"group:wood", "", "group:wood"},
+		{"", "group:wood" ,""},
+		{"group:wood", "", "group:wood"} 
 	}
 })
