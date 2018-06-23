@@ -139,6 +139,6 @@ minetest.register_node("home_blocks:half_ice_brick",{
 			type = "fixed",
 			fixed = {
             {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
-        },
+        }},
 		groups = {cracky = 1}
 	})
