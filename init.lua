@@ -17,7 +17,7 @@ minetest.register_craft({
     output = "home_blocks:covered_stone",
     recipe = {
         {"group:wool"},
-        {"group:stone"},
+        {"default:stone"},
 			}
 })
 
@@ -107,4 +107,12 @@ minetest.register_node("home_blocks:covered_stone_desert",{
 		is_ground_content = false,
 		groups = {cracky = 2, stone = 1, flamable = 1},
 		drops = "home_blocks:covered_stone_desert"
+})
+
+minetest.register_craft({
+    output = "home_blocks:covered_stone_desert",
+    recipe = {
+        {"group:wool"},
+        {"default:desert_stone"},
+			}
 })
