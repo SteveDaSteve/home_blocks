@@ -106,7 +106,7 @@ minetest.register_node("home_blocks:covered_stone_desert",{
 },
 		is_ground_content = false,
 		groups = {cracky = 2, stone = 1, flamable = 1},
-		drops = "home_blocks:covered_stone_desert"
+		drop = "home_blocks:covered_stone_desert"
 })
 
 minetest.register_craft({
@@ -116,3 +116,20 @@ minetest.register_craft({
         {"default:desert_stone"},
 			}
 })
+
+minetest.register_node("home_blocks:ice_brick",{
+		description = "Ice Brick",
+		tiles = {"home_blocks_ice_brick.png},
+		groups = {cracky = 1}
+	}
+		
+minetest.register_craft({
+		output = "home_blocks:ice_brick",
+		recipe = {
+			{"default:ice","default:ice","default:ice},
+			{"default:ice","default:ice","default:ice"},
+			{"default:ice","default:ice","default:ice"},
+		}
+})
+			
+		
