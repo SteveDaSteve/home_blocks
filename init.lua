@@ -98,7 +98,7 @@ minetest.register_node("home_blocks:covered_stone_desert",{
 		description = "Desert Stone Table",
 		tiles = {
 			"testmod_stone_table_top.png",
-			"default_stone.png",
+			"default_desert_stone.png",
 			"testmod_stone_table_desert.png",
 			"testmod_stone_table_desert.png",
 			"testmod_stone_table_desert.png",
