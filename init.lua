@@ -93,3 +93,18 @@ minetest.register_craft({
 		{"default:clay_lump"}
 	}
 })
+
+minetest.register_node("home_blocks:covered_stone_desert",{
+		description = "Desert Stone Table",
+		tiles = {
+			"testmod_stone_table_top.png",
+			"default_stone.png",
+			"testmod_stone_table_desert.png",
+			"testmod_stone_table_desert.png",
+			"testmod_stone_table_desert.png",
+			"testmod_stone_table_desert.png",
+},
+		is_ground_content = false,
+		groups = {cracky = 2, stone = 1, flamable = 1},
+		drops = "home_blocks:covered_stone_desert"
+})
