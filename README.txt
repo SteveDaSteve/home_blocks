@@ -9,5 +9,9 @@ https://github.com/SteveDaSteve/home_blocks/wiki
 
 This mod includes:
 - Stone tables (Stone with a tablecloth)
+- Desert Stone Tables
 - Lightbulbs (Give off light)
+- Clay Pots
+- Crates
+- Ice Bricks and Ice Brick Slabs
 More soon to come.
