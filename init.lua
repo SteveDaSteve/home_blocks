@@ -144,6 +144,7 @@ minetest.register_node("home_blocks:half_ice_brick",{
 		groups = {cracky = 1}
 	})
 
+-- Anamated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
 		paramtype2 = "facedir",
@@ -165,7 +166,75 @@ minetest.register_node("home_blocks:path_stone",{
 minetest.register_craft({
 		output = "home_blocks:path_stone 4",
 		recipe = {
-			{"default:diamond"},
-			{"default:stone"},
+			{"default:diamond","",""},
+			{"","home_blocks:",""},
+			{"","",""}
+		}
+})
+
+minetest.register_node("home_blocks:rough_stone"{
+		description = "Rough Stone",
+		tiles = "home_blocks_pathstone_other",
+		group = {stone = 1, cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:rough_stone",
+		recipe = {
+			{"default:gravel"},
+			{"group:stone"}
+		}
+	})
+
+minetest.register_node("home_blocks:spot_stone",{
+		description = "Spot Stone",
+		light_source = 6,
+    tiles = {
+        {
+            name = "home_blocks_spot_stone.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = 4.0
+            }
+        }
+    },
+		groups = {cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:spot_stone 4",
+		recipe = {
+			{"","default:diamond",""},
+			{"","home_blocks:",""},
+			{"","",""}
+		}
+})
+
+minetest.register_node("home_blocks:arrow_stone",{
+		description = "Arrow Stone",
+		paramtype2 = "facedir",
+		light_source = 6,
+    tiles = {
+        {
+            name = "home_blocks_arrow_stone.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = 4.0
+            }
+        }
+    },
+		groups = {cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:arrow_stone 4",
+		recipe = {
+			{"","","default:diamond"},
+			{"","home_blocks:",""},
+			{"","",""}
 		}
 })
