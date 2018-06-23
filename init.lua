@@ -119,14 +119,14 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:ice_brick",{
 		description = "Ice Brick",
-		tiles = {"home_blocks_ice_brick.png},
+		tiles = {"home_blocks_ice_brick.png"},
 		groups = {cracky = 1}
 	}
 		
 minetest.register_craft({
 		output = "home_blocks:ice_brick",
 		recipe = {
-			{"default:ice","default:ice","default:ice},
+			{"default:ice","default:ice","default:ice"},
 			{"default:ice","default:ice","default:ice"},
 			{"default:ice","default:ice","default:ice"},
 		}
