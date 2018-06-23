@@ -172,7 +172,7 @@ minetest.register_craft({
 		}
 })
 
-minetest.register_node("home_blocks:rough_stone"{
+minetest.register_node("home_blocks:rough_stone",{
 		description = "Rough Stone",
 		tiles = "home_blocks_pathstone_other",
 		group = {stone = 1, cracky = 1}
@@ -212,7 +212,7 @@ minetest.register_craft({
 		}
 })
 
-minetest.register_node("home_blocks:arrow_stone",{
+minetest.register_node("home_blocks:arrow_stone"{
 		description = "Arrow Stone",
 		paramtype2 = "facedir",
 		light_source = 6,
