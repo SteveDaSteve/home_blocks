@@ -143,3 +143,28 @@ minetest.register_node("home_blocks:half_ice_brick",{
         }},
 		groups = {cracky = 1}
 	})
+
+minetest.register_node("home_blocks:path_stone",{
+		description = "Path Stone",
+		paramtype2 = "facedir"
+    tiles = {
+        {
+            name = "home_blocks_pathstone.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = 4.0
+            }
+        }
+    },
+		groups = {cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:path_stone 4",
+		recipe = {
+			{"default:diamond"},
+			{"default:stone"},
+		}
+})
