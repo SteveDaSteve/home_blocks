@@ -124,12 +124,21 @@ minetest.register_node("home_blocks:ice_brick",{
 	})
 		
 minetest.register_craft({
-		output = "home_blocks:ice_brick",
+		output = "home_blocks:ice_brick 6",
 		recipe = {
 			{"default:ice","default:ice","default:ice"},
 			{"default:ice","default:ice","default:ice"},
 			{"default:ice","default:ice","default:ice"},
 		}
 })
-			
-		
+
+minetest.register_node("home_blocks:half_ice_brick",{
+		description = "Ice Brick Slab",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+        },
+		groups = {cracky = 1}
+	})
