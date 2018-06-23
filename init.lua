@@ -134,7 +134,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:half_ice_brick",{
 		description = "Ice Brick Slab",
-		drawtype = "nodebox"
+		drawtype = "nodebox",
 		tiles = {"home_blocks_ice_brick.png"},
 		node_box = {
 			type = "fixed",
