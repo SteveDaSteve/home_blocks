@@ -146,7 +146,7 @@ minetest.register_node("home_blocks:half_ice_brick",{
 
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
-		paramtype2 = "facedir"
+		paramtype2 = "facedir",
 		light_source = 6,
     tiles = {
         {
