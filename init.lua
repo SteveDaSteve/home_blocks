@@ -24,8 +24,9 @@ minetest.register_craft({
 minetest.register_node("home_blocks:rope_ladder",{
 		description = "Rope Ladder",
 		drawtype = "signlike",
+		wield_image = "home_blocks_rope_ladder.png",
 		inventory_image = "home_blocks_rope_ladder.png",
-		tiles = "home_blocks_rope_ladder.png",
+		tiles = {"home_blocks_rope_ladder.png"},
 		paramtype2 = "wallmounted",
     selection_box = {
         type = "wallmounted",
