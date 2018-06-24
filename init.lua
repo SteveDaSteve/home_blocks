@@ -105,6 +105,7 @@ minetest.register_node("home_blocks:clay_pot", {
 	description = "Clay Pot",
 	inventory_image = "home_blocks_clay_pot.png",
 	drawtype = "plantlike",
+	walkable = false,
 	tiles = {"home_blocks_clay_pot.png"},
 	sunlight_propagates = true,
 	groups = {cracky = 1, oddly_breakable_by_hand = 1},
@@ -168,7 +169,29 @@ minetest.register_node("home_blocks:half_ice_brick",{
 		groups = {cracky = 1}
 	})
 
--- Anamated Stones
+minetest.register_node("home_blocks:wood_table",{
+		description = "Wooden Table",
+		tiles = {
+			"home_blocks_wood_table_top.png",
+			"",
+			"home_blocks_wood_table_lags.png",
+			"home_blocks_wood_table_lags.png",
+			"home_blocks_wood_table_lags.png",
+			"home_blocks_wood_table_lags.png"
+			},
+		groups = {wood = 1, choppy = 1}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:wood_table",
+		recipe = {
+			{"group:wood","group:wood","group:wood"},
+			{"default:stick","","default:stick"},
+			{"default:stick","","default:stick"}
+			}
+		})
+
+-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
 		paramtype2 = "facedir",
