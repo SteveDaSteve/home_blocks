@@ -26,6 +26,10 @@ minetest.register_node("home_blocks:rope_ladder",{
 		drawtype = "signlike",
 		inventory_image = "home_blocks_rope_ladder.png",
 		tiles = "home_blocks_rope_ladder.png",
+		paramtype2 = "wallmounted",
+    selection_box = {
+        type = "wallmounted",
+    },
 		climable = true,
 		walkable = false,
 		sunlight_propagates = true
@@ -192,7 +196,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:rough_stone",{
 		description = "Rough Stone",
-		tiles = "home_blocks_pathstone_other",
+		tiles = "home_blocks_pathstone_other.png",
 		group = {stone = 1, cracky = 1}
 	})
 
