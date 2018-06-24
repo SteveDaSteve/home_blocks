@@ -31,7 +31,7 @@ minetest.register_node("home_blocks:rope_ladder",{
     selection_box = {
         type = "wallmounted",
     },
-		climable = true,
+		climbable = true,
 		walkable = false,
 		sunlight_propagates = true,
 		groups = {oddly_breakable_by_hand = 1}
