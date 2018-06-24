@@ -4,3 +4,9 @@ Nodes:
 - Stone Tables
 - Lightbulbs
 - Wooden Crates
+- Ice Brick
+- Ice Brick Slab
+- Rough Stone
+- Path Stone
+- Arrow Stone
+- Spotted Stone
