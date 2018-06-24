@@ -33,7 +33,8 @@ minetest.register_node("home_blocks:rope_ladder",{
     },
 		climable = true,
 		walkable = false,
-		sunlight_propagates = true
+		sunlight_propagates = true,
+		groups = {oddly_breakable_by_hand = 1}
 		})
 
 minetest.register_craft({
