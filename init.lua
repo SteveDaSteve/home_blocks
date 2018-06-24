@@ -199,7 +199,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:rough_stone",{
 		description = "Rough Stone",
 		tiles = {"home_blocks_pathstone_other.png"},
-		group = {stone = 1, cracky = 1}
+		group = {stone = 1, cracky = 1},
+		diggable = true
 	})
 
 minetest.register_craft({
