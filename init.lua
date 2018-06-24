@@ -21,6 +21,24 @@ minetest.register_craft({
 			}
 })
 
+minetest.register_node("home_blocks:rope_ladder",{
+		description = "Rope Ladder",
+		drawtype = "signlike",
+		inventory_image = "home_blocks_rope_ladder.png",
+		tiles = "home_blocks_rope_ladder.png",
+		climable = true,
+		walkable = false,
+		sunlight_propagates = true
+		})
+
+minetest.register_craft({
+		output = "home_blocks:rope_ladder 6",
+		recipe = {
+			{'default:string','','default:string'},
+			{'default:string','default:string','default:string'},
+			{'default:string','','default:string'}
+			}
+		})
 minetest.register_node("home_blocks:lightbulb",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
