@@ -193,6 +193,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:shingles_stair",{
 		description = "Roof Shingles",
+		tiles = {"home_blocks_shingles.png"}
 		drawtype = "nodebox",
 		paramtype = "light",
 		node_box = {
