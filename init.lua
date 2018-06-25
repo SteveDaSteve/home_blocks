@@ -191,6 +191,27 @@ minetest.register_craft({
 			}
 		})
 
+minetest.register_node("home_blocks:shingles_stair",{
+		description = "Roof Shingles",
+		drawtype = "nodebox",
+		paramtype = "light",
+		node_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+            {-0.5, 0, 0, 0.5, 0.5, 0.5}
+       }},
+		groups = {choppy = 1}
+	})
+
+minetest.register_craft{(
+		output = "home_blocks:shingles_stair",
+		recipe = {
+			{"","","default:clay"},
+			{"","default:clay","default:clay"},
+			{"default:clay","default:clay","default:clay"}
+		}
+	})
 -- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
