@@ -204,7 +204,7 @@ minetest.register_node("home_blocks:shingles_stair",{
 		groups = {choppy = 1}
 	})
 
-minetest.register_craft{(
+minetest.register_craft({
 		output = "home_blocks:shingles_stair",
 		recipe = {
 			{"","","default:clay"},
