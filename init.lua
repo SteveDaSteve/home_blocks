@@ -48,6 +48,7 @@ minetest.register_craft({
 minetest.register_node("home_blocks:lightbulb",{
 		description = "Light Bulb",
 		drawtype = "plantlike",
+		paramtype = "light",
 		inventory_image = "testmod_lightbulb.png",
 		walkable = false,
 		sunlight_propagates = true,
@@ -63,6 +64,7 @@ minetest.register_node("home_blocks:lightbulb",{
 minetest.register_node("home_blocks:lightbulb_lit",{
 		description = "Light Bulb (Lit)",
 		drawtype = "plantlike",
+		paramtype = "light",
 		inventory_image = "testmod_lightbulb_lit.png",
 		walkable = false,
 		sunlight_propagates = true,
@@ -103,6 +105,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:clay_pot", {
 	description = "Clay Pot",
+	paramtype = "light",
 	inventory_image = "home_blocks_clay_pot.png",
 	drawtype = "plantlike",
 	walkable = false,
@@ -159,6 +162,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:half_ice_brick",{
 		description = "Ice Brick Slab",
+		paramtype = "light",
 		drawtype = "nodebox",
 		tiles = {"home_blocks_ice_brick.png"},
 		node_box = {
@@ -193,6 +197,8 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:shingles_stair",{
 		description = "Roof Shingles",
+		paramtype = "light",
+		paramtype2 = "facedir",
 		tiles = {"home_blocks_shingles.png"},
 		drawtype = "nodebox",
 		paramtype = "light",
