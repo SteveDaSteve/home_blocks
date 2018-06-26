@@ -220,7 +220,7 @@ minetest.register_craft({
 		}
 	})
 
-minetest.register_node("home_blocks:shingles_stair_inner"{
+minetest.register_node("home_blocks:shingles_stair_inner",{
 		description = "Inner Roof Shingles",
 		paramtype = "light",
 		paramtype2 = "facedir",
@@ -246,7 +246,7 @@ minetest.register_craft({
 		}
 	})
 
-minetest.register_node("home_blocks:shingles_stair_outer"{
+minetest.register_node("home_blocks:shingles_stair_outer",{
 		description = "Outer Roof Shingles",
 		paramtype = "light",
 		paramtype2 = "facedir",
