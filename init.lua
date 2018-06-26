@@ -219,6 +219,57 @@ minetest.register_craft({
 			{"default:clay","default:clay","default:clay"}
 		}
 	})
+
+minetest.register_node("home_blocks:shingles_stair_inner"{
+		description = "Inner Roof Shingles",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		tiles = {"home_blocks_shingles.png"},
+		drawtype = "nodebox",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.5, 0.5, 0.5},
+				{-0.5, 0.0, -0.5, 0.0, 0.5, 0.0},
+			}
+		},
+		groups = {choppy = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:shingles_stair_inner",
+		recipe = {
+			{"","default:clay",""},
+			{"default:clay","","default:clay"},
+			{"default:clay","default:clay","default:clay"}
+		}
+	})
+
+minetest.register_node("home_blocks:shingles_stair_outer"{
+		description = "Outer Roof Shingles",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		tiles = {"home_blocks_shingles.png"},
+		drawtype = "nodebox",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.0, 0.5, 0.5},
+			}
+		},
+		groups = {choppy = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:shingles_stair_inner",
+		recipe = {
+			{"","default:clay",""},
+			{"default:clay","default:clay","default:clay"}
+		}
+	})
+
 -- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
