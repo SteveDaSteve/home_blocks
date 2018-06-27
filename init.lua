@@ -214,9 +214,9 @@ minetest.register_node("home_blocks:shingles_stair",{
 minetest.register_craft({
 		output = "home_blocks:shingles_stair",
 		recipe = {
-			{"","","default:clay"},
-			{"","default:clay","default:clay"},
-			{"default:clay","default:clay","default:clay"}
+			{"","","default:clay_lump"},
+			{"","default:clay_lump","default:clay_lump"},
+			{"default:clay_lump","default:clay_lump","default:clay_lump"}
 		}
 	})
 
@@ -240,9 +240,9 @@ minetest.register_node("home_blocks:shingles_stair_inner",{
 minetest.register_craft({
 		output = "home_blocks:shingles_stair_inner",
 		recipe = {
-			{"","default:clay",""},
-			{"default:clay","","default:clay"},
-			{"default:clay","default:clay","default:clay"}
+			{"","default:clay_lump",""},
+			{"default:clay_lump","","default:clay_lump"},
+			{"default:clay_lump","default:clay_lump","default:clay_lump"}
 		}
 	})
 
@@ -265,8 +265,8 @@ minetest.register_node("home_blocks:shingles_stair_outer",{
 minetest.register_craft({
 		output = "home_blocks:shingles_stair_inner",
 		recipe = {
-			{"","default:clay",""},
-			{"default:clay","default:clay","default:clay"}
+			{"","default:clay_lump",""},
+			{"default:clay_lump","default:clay_lump","default:clay_lump"}
 		}
 	})
 
