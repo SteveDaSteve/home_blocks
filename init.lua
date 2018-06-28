@@ -175,6 +175,7 @@ minetest.register_node("home_blocks:half_ice_brick",{
 
 minetest.register_node("home_blocks:wood_table",{
 		description = "Wooden Table",
+		drawtype = "allfaces",
 		tiles = {
 			"home_blocks_wood_table_top.png",
 			"",
