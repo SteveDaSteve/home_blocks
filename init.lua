@@ -267,6 +267,7 @@ minetest.register_craft({
 		recipe = {
 			{"","default:clay_lump",""},
 			{"default:clay_lump","default:clay_lump","default:clay_lump"}
+			}
 	})
 
 minetest.register_node("home_blocks:tin_roof",{
