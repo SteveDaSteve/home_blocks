@@ -174,18 +174,32 @@ minetest.register_node("home_blocks:half_ice_brick",{
 	})
 
 minetest.register_node("home_blocks:wood_table",{
-		description = "Wooden Table",
-		drawtype = "allfaces",
-		tiles = {
-			"home_blocks_wood_table_top.png",
-			"home_blocks_blank.png",
-			"home_blocks_wood_table_lags.png",
-			"home_blocks_wood_table_lags.png",
-			"home_blocks_wood_table_lags.png",
-			"home_blocks_wood_table_lags.png"
-			},
-		groups = {wood = 1, choppy = 1}
-		})
+      description = "Wooden Table",
+      drawtype = "nodebox",
+      tiles = {
+      "home_blocks_wood_table_top.png",
+      "home_blocks_wood_table_top.png",
+      "home_blocks_wood_table_lags.png",
+      "home_blocks_wood_table_lags.png",
+      "home_blocks_wood_table_lags.png",
+      "home_blocks_wood_table_lags.png"
+   },
+      groups = {wood = 1, choppy = 1},
+      node_box = {
+      type = "fixed",
+      fixed = {
+         {-0.5, 0.3125, -0.5, 0.5, 0.5, 0.5}, -- NodeBox1
+         {0.25, 0.25, -0.5, 0.5, 0.3125, -0.25}, -- NodeBox2
+         {0.25, 0.25, 0.25, 0.5, 0.3125, 0.5}, -- NodeBox3
+         {-0.5, 0.25, 0.25, -0.25, 0.3125, 0.5}, -- NodeBox4
+         {-0.5, 0.25, -0.5, -0.25, 0.3125, -0.25}, -- NodeBox5
+         {0.3125, -0.5, 0.3125, 0.5, 0.25, 0.5}, -- NodeBox6
+         {0.3125, -0.5, -0.5, 0.5, 0.25, -0.3125}, -- NodeBox7
+         {-0.5, -0.5, 0.3125, -0.3125, 0.25, 0.5}, -- NodeBox8
+         {-0.5, -0.5, -0.5, -0.3125, 0.25, -0.3125}, -- NodeBox9
+      }
+   }
+})
 
 minetest.register_craft({
 		output = "home_blocks:wood_table",
