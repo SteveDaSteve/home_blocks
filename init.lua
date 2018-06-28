@@ -68,7 +68,7 @@ minetest.register_node("home_blocks:lightbulb_lit",{
 		inventory_image = "testmod_lightbulb_lit.png",
 		walkable = false,
 		sunlight_propagates = true,
-		light_source = 10,
+		light_source = 14,
 		tiles = {"testmod_lightbulb_lit.png"},
 		is_ground_content = false,
 		groups = {oddly_breakable_by_hand = 1, not_in_creative_inventory = 1},
@@ -348,6 +348,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:chandelier",{
 		description = "Chandelier",
 		drawtype = "plantlike",
+		light_source = 14,
+		inventory_image = "home_blocks_chandelier.png",
 		tiles = {
         {
             name = "home_blocks_chandelier.png",
