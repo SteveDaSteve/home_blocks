@@ -178,7 +178,7 @@ minetest.register_node("home_blocks:wood_table",{
 		drawtype = "allfaces",
 		tiles = {
 			"home_blocks_wood_table_top.png",
-			"",
+			"home_blocks_blank.png",
 			"home_blocks_wood_table_lags.png",
 			"home_blocks_wood_table_lags.png",
 			"home_blocks_wood_table_lags.png",
