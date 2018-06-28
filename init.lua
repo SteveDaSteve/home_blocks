@@ -40,9 +40,9 @@ minetest.register_node("home_blocks:rope_ladder",{
 minetest.register_craft({
 		output = "home_blocks:rope_ladder 6",
 		recipe = {
-			{'default:string','','default:string'},
-			{'default:string','default:string','default:string'},
-			{'default:string','','default:string'}
+			{'farming:string','','farming:string'},
+			{'farming:string','farming:string','farming:string'},
+			{'farming:string','','farming:string'}
 			}
 		})
 minetest.register_node("home_blocks:lightbulb",{
@@ -212,7 +212,7 @@ minetest.register_node("home_blocks:shingles_stair",{
 	})
 
 minetest.register_craft({
-		output = "home_blocks:shingles_stair 4",
+		output = "home_blocks:shingles_stair 8",
 		recipe = {
 			{"","","default:clay_lump"},
 			{"","default:clay_lump","default:clay_lump"},
@@ -238,9 +238,10 @@ minetest.register_node("home_blocks:shingles_stair_inner",{
 	})
 
 minetest.register_craft({
-		output = "home_blocks:shingles_stair_inner 4",
+		output = "home_blocks:shingles_stair_inner 8",
 		recipe = {
 			{"","default:clay_lump",""},
+			{"default:clay_lump","","default:clay_lump"},
 			{"default:clay_lump","default:clay_lump","default:clay_lump"}
 		}
 	})
@@ -262,15 +263,111 @@ minetest.register_node("home_blocks:shingles_stair_outer",{
 	})
 
 minetest.register_craft({
-		output = "home_blocks:shingles_stair_outer 4",
+		output = "home_blocks:shingles_stair_outer 8",
 		recipe = {
 			{"","default:clay_lump",""},
-			{"default:clay_lump","","default:clay_lump"},
 			{"default:clay_lump","default:clay_lump","default:clay_lump"}
-		}
 	})
 
--- Animated Stones
+minetest.register_node("home_blocks:tin_roof",{
+			description = "Tin Roof",
+			paramtype = "light",
+			paramtype2 = "facedir",
+			tiles = {"home_blocks_tin_roof.png"},
+			drawtype = "nodebox",
+			node_box = {
+       		 type = "fixed",
+       		 fixed = {
+        		    {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+       		     {-0.5, 0, 0, 0.5, 0.5, 0.5}
+      		 }},
+			groups = {cracky = 1}
+		})
+
+	minetest.register_craft({
+			output = "home_blocks:tin_roof 8",
+			recipe = {
+				{'','',"default:tin_ingot"},
+				{'',"default:tin_ingot","default:tin_ingot"},
+				{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
+				}
+			})
+	
+	minetest.register_node("home_blocks:tin_roof_inner",{
+		description = "Inner Tin Roof",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		tiles = {"home_blocks_tin_roof.png"},
+		drawtype = "nodebox",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.5, 0.5, 0.5},
+				{-0.5, 0.0, -0.5, 0.0, 0.5, 0.0},
+			}
+		},
+		groups = {cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:tin_roof_inner 8",
+		recipe = {
+			{"","default:tin_ingot",""},
+			{"default:tin_ingot","","default:tin_ingot"},
+			{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
+		}
+	})
+	
+	minetest.register_node("home_blocks:tin_roof_outer",{
+		description = "Outer Tin Roof",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		tiles = {"home_blocks_tin_roof.png"},
+		drawtype = "nodebox",
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.0, 0.5, 0.5},
+			}
+		},
+		groups = {cracky = 1}
+	})
+
+minetest.register_craft({
+		output = "home_blocks:shingles_tin_roof 8",
+		recipe = {
+			{"","default:tin_ingot",""},
+			{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
+	})
+	
+minetest.register_node{"home_blocks:chandelier",{
+		description = "Chandelier",
+		drawtype = "plantlike",
+		tiles = {
+        {
+            name = "home_blocks_chandelier.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = .5
+            }
+        }
+    },
+		groups = {oddly_breakable_by_hand = 1}
+				})
+		
+minetest.register_craft({
+				output = "home_blocks:chandelier",
+				recipe = {
+					{"","default:gold_ingot",""},
+					{"default:torch","default:gold_ingot","default:torch"}
+					}
+				})
+
+				-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
 		paramtype2 = "facedir",
