@@ -341,6 +341,7 @@ minetest.register_craft({
 		recipe = {
 			{"","default:tin_ingot",""},
 			{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
+			}
 	})
 	
 minetest.register_node{"home_blocks:chandelier",{
@@ -361,12 +362,12 @@ minetest.register_node{"home_blocks:chandelier",{
 				})
 		
 minetest.register_craft({
-				output = "home_blocks:chandelier",
-				recipe = {
-					{"","default:gold_ingot",""},
-					{"default:torch","default:gold_ingot","default:torch"}
-					}
-				})
+		output = "home_blocks:chandelier",
+		recipe = {
+			{"","default:gold_ingot",""},
+			{"default:torch","default:gold_ingot","default:torch"}
+			}
+		})
 
 				-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
