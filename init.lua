@@ -359,7 +359,8 @@ minetest.register_node{"home_blocks:chandelier",{
         }
     },
 		groups = {oddly_breakable_by_hand = 1}
-				})
+	}			
+	})
 		
 minetest.register_craft({
 		output = "home_blocks:chandelier",
