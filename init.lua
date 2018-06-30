@@ -27,6 +27,7 @@ minetest.register_node("home_blocks:rope_ladder",{
 		wield_image = "home_blocks_rope_ladder.png",
 		inventory_image = "home_blocks_rope_ladder.png",
 		tiles = {"home_blocks_rope_ladder.png"},
+		light_propagates = true,
 		paramytpe = "light",
 		paramtype2 = "wallmounted",
     selection_box = {
@@ -364,7 +365,10 @@ minetest.register_node("home_blocks:chandelier",{
 		description = "Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
+		waklable = false,
+		climbable = true
 		inventory_image = "home_blocks_chandelier_thumb.png",
+		wield_image = "home_blocks_chandelier_thumb.png",
 		tiles = {
         {
             name = "home_blocks_chandelier.png",
@@ -391,10 +395,11 @@ minetest.register_node("home_blocks:chain", {
 		description = "Chain",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_chain.png"},
+		inventory_image = "home_blocks_chain.png",
 		climbable = true,
 		walkable = false,
 		paramytpe = "light",
-		node_box = {
+		selection_box = {
 	type = "fixed",
 	fixed = {
 		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
