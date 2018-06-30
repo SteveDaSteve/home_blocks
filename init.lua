@@ -352,7 +352,7 @@ minetest.register_craft({
 	})
 
 minetest.register_craft({
-		output = "home_blocks:shingles_tin_roof_outer 8",
+		output = "home_blocks:tin_roof_outer 8",
 		recipe = {
 			{"","default:tin_ingot",""},
 			{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
