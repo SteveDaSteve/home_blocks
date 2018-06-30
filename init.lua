@@ -362,7 +362,7 @@ minetest.register_craft({
 	})
 	
 minetest.register_node("home_blocks:chandelier",{
-		description = "Chandelier",
+		description = "Gold Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
 		walkable = false,
