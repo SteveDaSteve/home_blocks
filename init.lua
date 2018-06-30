@@ -625,3 +625,26 @@ minetest.register_craft({
 			{"","",""}
 		}
 })
+
+--Carpets--
+
+minetest.register_node("home_blocks:red_carpet",{
+		description = "Red Carpet",
+		tiles = {"home_blocks_red_carpet.png"},
+		paramtype = "light",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+	}
+},
+		groups = {wool = 1, oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:red_carpet",
+		recipe = {
+			{"wool:red","wool:red"}
+			}
+		})
+		
