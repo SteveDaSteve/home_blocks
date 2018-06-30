@@ -365,7 +365,7 @@ minetest.register_node("home_blocks:chandelier",{
 		description = "Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
-		waklable = false,
+		walkable = false,
 		climbable = true,
 		inventory_image = "home_blocks_chandelier_thumb.png",
 		wield_image = "home_blocks_chandelier_thumb.png",
