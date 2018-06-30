@@ -391,6 +391,66 @@ minetest.register_craft({
 			}
 		})
 
+minetest.register_node("home_blocks:copper_chandelier",{
+		description = "Copper Chandelier",
+		drawtype = "plantlike",
+		light_source = 14,
+		walkable = false,
+		climbable = true,
+		inventory_image = "home_blocks_chandelier_copper_thumb.png",
+		wield_image = "home_blocks_chandelier_copper_thumb.png",
+		tiles = {
+        {
+            name = "home_blocks_chandelier_copper.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = .5
+            }
+        }
+    },
+		groups = {oddly_breakable_by_hand = 1}			
+	})
+		
+minetest.register_craft({
+		output = "home_blocks:copper_chandelier",
+		recipe = {
+			{"","default:copper_ingot",""},
+			{"default:torch","default:copper_ingot","default:torch"}
+			}
+		})
+
+minetest.register_node("home_blocks:steel_chandelier",{
+		description = "Steel Chandelier",
+		drawtype = "plantlike",
+		light_source = 14,
+		walkable = false,
+		climbable = true,
+		inventory_image = "home_blocks_chandelier_steel_thumb.png",
+		wield_image = "home_blocks_chandelier_steel_thumb.png",
+		tiles = {
+        {
+            name = "home_blocks_chandelier_steel.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 16,
+                aspect_h = 16,
+                length   = .5
+            }
+        }
+    },
+		groups = {oddly_breakable_by_hand = 1}			
+	})
+		
+minetest.register_craft({
+		output = "home_blocks:chandelier",
+		recipe = {
+			{"","default:steel_ingot",""},
+			{"default:torch","default:steel_ingot","default:torch"}
+			}
+		})
+
 minetest.register_node("home_blocks:chain", {
 		description = "Steel Chain",
 		drawtype = "plantlike",
