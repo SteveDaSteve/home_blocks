@@ -400,6 +400,7 @@ minetest.register_node("home_blocks:chain", {
 	}
 },
 		groups = {oddly_breakable_by_hand = 3}
+		})
 		
 				-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
