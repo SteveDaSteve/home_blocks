@@ -392,7 +392,7 @@ minetest.register_craft({
 		})
 
 minetest.register_node("home_blocks:chain", {
-		description = "Chain",
+		description = "Steel Chain",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_chain.png"},
 		inventory_image = "home_blocks_chain.png",
@@ -408,6 +408,7 @@ minetest.register_node("home_blocks:chain", {
 		groups = {oddly_breakable_by_hand = 3}
 		})
 
+
 minetest.register_craft({
 		output = "home_blocks:chain",
 		recipe = {
@@ -416,7 +417,59 @@ minetest.register_craft({
 			{"default:steel_ingot"}
 			}
 		})
-		
+
+minetest.register_node("home_blocks:copper_chain", {
+		description = "Copper Chain",
+		drawtype = "plantlike",
+		tiles = {"home_blocks_copper_chain.png"},
+		inventory_image = "home_blocks_copper_chain.png",
+		climbable = true,
+		walkable = false,
+		paramytype = "light",
+		selection_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+	}
+},
+		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:copper_chain",
+		recipe = {
+			{"default:copper_ingot"},
+			{"default:copper_ingot"},
+			{"default:copper_ingot"}
+			}
+		})
+
+minetest.register_node("home_blocks:gold_chain", {
+		description = "Gold Chain",
+		drawtype = "plantlike",
+		tiles = {"home_blocks_gold_chain.png"},
+		inventory_image = "home_blocks_gold_chain.png",
+		climbable = true,
+		walkable = false,
+		paramytype = "light",
+		selection_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+	}
+},
+		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:gold_chain",
+		recipe = {
+			{"default:gold_ingot"},
+			{"default:gold_ingot"},
+			{"default:gold_ingot"}
+			}
+		})
+
 				-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
