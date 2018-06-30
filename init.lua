@@ -27,6 +27,7 @@ minetest.register_node("home_blocks:rope_ladder",{
 		wield_image = "home_blocks_rope_ladder.png",
 		inventory_image = "home_blocks_rope_ladder.png",
 		tiles = {"home_blocks_rope_ladder.png"},
+		paramytpe = "light",
 		paramtype2 = "wallmounted",
     selection_box = {
         type = "wallmounted",
@@ -386,6 +387,20 @@ minetest.register_craft({
 			}
 		})
 
+minetest.register_node("home_blocks:chain", {
+		description = "Chain",
+		drawtype = "plantlike",
+		climbable = true,
+		walkable = false,
+		paramytpe = "light",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+	}
+},
+		groups = {oddly_breakable_by_hand = 3}
+		
 				-- Animated Stones
 minetest.register_node("home_blocks:path_stone",{
 		description = "Path Stone",
