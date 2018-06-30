@@ -458,7 +458,7 @@ minetest.register_node("home_blocks:chain", {
 		inventory_image = "home_blocks_chain.png",
 		climbable = true,
 		walkable = false,
-		paramytype = "light",
+		paramtype = "light",
 		selection_box = {
 	type = "fixed",
 	fixed = {
@@ -485,7 +485,7 @@ minetest.register_node("home_blocks:copper_chain", {
 		inventory_image = "home_blocks_copper_chain.png",
 		climbable = true,
 		walkable = false,
-		paramytype = "light",
+		paramtype = "light",
 		selection_box = {
 	type = "fixed",
 	fixed = {
@@ -511,7 +511,7 @@ minetest.register_node("home_blocks:gold_chain", {
 		inventory_image = "home_blocks_gold_chain.png",
 		climbable = true,
 		walkable = false,
-		paramytype = "light",
+		paramtype = "light",
 		selection_box = {
 	type = "fixed",
 	fixed = {
