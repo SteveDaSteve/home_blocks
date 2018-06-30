@@ -28,7 +28,7 @@ minetest.register_node("home_blocks:rope_ladder",{
 		inventory_image = "home_blocks_rope_ladder.png",
 		tiles = {"home_blocks_rope_ladder.png"},
 		light_propagates = true,
-		paramytpe = "light",
+		paramtype = "light",
 		paramtype2 = "wallmounted",
     selection_box = {
         type = "wallmounted",
@@ -398,7 +398,7 @@ minetest.register_node("home_blocks:chain", {
 		inventory_image = "home_blocks_chain.png",
 		climbable = true,
 		walkable = false,
-		paramytpe = "light",
+		paramytype = "light",
 		selection_box = {
 	type = "fixed",
 	fixed = {
@@ -406,6 +406,15 @@ minetest.register_node("home_blocks:chain", {
 	}
 },
 		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:chain",
+		recipe = {
+			{"default:steel_ingot"},
+			{"default:steel_ingot"},
+			{"default:steel_ingot"}
+			}
 		})
 		
 				-- Animated Stones
