@@ -390,7 +390,7 @@ minetest.register_craft({
 minetest.register_node("home_blocks:chain", {
 		description = "Chain",
 		drawtype = "plantlike",
-		tiles = "home_blocks_chain.png",
+		tiles = {"home_blocks_chain.png"},
 		climbable = true,
 		walkable = false,
 		paramytpe = "light",
