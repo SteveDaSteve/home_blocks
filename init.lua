@@ -352,7 +352,7 @@ minetest.register_craft({
 	})
 
 minetest.register_craft({
-		output = "home_blocks:shingles_tin_roof 8",
+		output = "home_blocks:shingles_tin_roof_outer 8",
 		recipe = {
 			{"","default:tin_ingot",""},
 			{"default:tin_ingot","default:tin_ingot","default:tin_ingot"}
@@ -363,7 +363,7 @@ minetest.register_node("home_blocks:chandelier",{
 		description = "Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
-		inventory_image = "home_blocks_chandelier.png",
+		inventory_image = "home_blocks_chandelier_thumb.png",
 		tiles = {
         {
             name = "home_blocks_chandelier.png",
