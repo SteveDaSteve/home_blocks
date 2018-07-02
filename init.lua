@@ -636,7 +636,7 @@ minetest.register_node("home_blocks:red_carpet",{
 		node_box = {
 	type = "fixed",
 	fixed = {
-		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
 	}
 },
 		groups = {wool = 1, oddly_breakable_by_hand = 3}
