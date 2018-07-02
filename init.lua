@@ -630,6 +630,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:red_carpet",{
 		description = "Red Carpet",
+		drawtype = "nodebox",
 		tiles = {"home_blocks_carpet_red.png"},
 		paramtype = "light",
 		node_box = {
