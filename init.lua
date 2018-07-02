@@ -630,7 +630,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:red_carpet",{
 		description = "Red Carpet",
-		tiles = {"home_blocks_red_carpet.png"},
+		tiles = {"home_blocks_carpet_red.png"},
 		paramtype = "light",
 		node_box = {
 	type = "fixed",
@@ -642,7 +642,7 @@ minetest.register_node("home_blocks:red_carpet",{
 		})
 
 minetest.register_craft({
-		output = "home_blocks:red_carpet",
+		output = "home_blocks:red_carpet 8",
 		recipe = {
 			{"wool:red","wool:red"}
 			}
