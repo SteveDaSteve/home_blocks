@@ -654,7 +654,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:green_bonsai",{
 		description = "Green Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_green_bonsai"},
+		tiles = {"home_blocks_green_bonsai.png"},
+		inventory_image = "home_blocks_green_bonsai.png",
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
@@ -671,7 +672,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:red_bonsai",{
 		description = "Red Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_red_bonsai"},
+		tiles = {"home_blocks_red_bonsai.png"},
+		inventory_image = "home_blocks_red_bonsai.png",
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
@@ -688,7 +690,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:pink_bonsai",{
 		description = "Pink Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_pink_bonsai"},
+		tiles = {"home_blocks_pink_bonsai.png"},
+		inventory_image = "home_blocks_pink_bonsai.png",
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
