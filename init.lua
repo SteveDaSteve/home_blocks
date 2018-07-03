@@ -649,3 +649,55 @@ minetest.register_craft({
 			}
 		})
 		
+
+--Bonsais--
+minetest.register_node("home_blocks:green_bonsai",{
+		description = "Green Bonsai",
+		drawtype = "plantlike",
+		tiles = {"home_blocks_green_bonsai"},
+		paramtype = "light",
+		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:green_bonsai 2",
+		recipe = {
+			{"wool:green"},
+			{"group:wood"},
+			{"default:clay_lump"}
+			}
+		})
+
+minetest.register_node("home_blocks:red_bonsai",{
+		description = "Red Bonsai",
+		drawtype = "plantlike",
+		tiles = {"home_blocks_red_bonsai"},
+		paramtype = "light",
+		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:red_bonsai 2",
+		recipe = {
+			{"wool:red"},
+			{"group:wood"},
+			{"default:clay_lump"}
+			}
+		})
+
+minetest.register_node("home_blocks:pink_bonsai",{
+		description = "Pink Bonsai",
+		drawtype = "plantlike",
+		tiles = {"home_blocks_pink_bonsai"},
+		paramtype = "light",
+		groups = {oddly_breakable_by_hand = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:pink_bonsai 2",
+		recipe = {
+			{"wool:pink"},
+			{"group:wood"},
+			{"default:clay_lump"}
+			}
+		})
