@@ -694,7 +694,7 @@ minetest.register_craft({
 minetest.register_node("home_blocks:yellow_carpet",{
 		description = "Yellow Carpet",
 		drawtype = "nodebox",
-		tiles = {"home_blocks_yelllow_carpet.png"},
+		tiles = {"home_blocks_yellow_carpet.png"},
 		paramtype = "light",
 		node_box = {
 	type = "fixed",
