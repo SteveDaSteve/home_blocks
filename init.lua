@@ -1022,6 +1022,7 @@ minetest.register_craft({
 
 minetest.register_node("home_blocks:music_box",{
 		description = "Music Box",
+		drawtype = "nodebox",
 		tiles = {
 			"home_blocks_music_top.png",
 			"home_blocks_music_bottom.png",
@@ -1029,6 +1030,12 @@ minetest.register_node("home_blocks:music_box",{
 			"home_blocks_music_side.png",
 			"home_blocks_music_side.png",
 			"home_blocks_music_side.png",
+},
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.3125, -0.5000, -0.3125, 0.3125, -0.1250, 0.3125}
+	}
 },
 		is_ground_content = false,
 		groups = {choppy = 3, oddly_breakable_by_hand = 3, flamable = 1},
