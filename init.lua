@@ -1041,4 +1041,11 @@ minetest.register_node("home_blocks:music_box",{
 },
 		is_ground_content = false,
 		groups = {choppy = 3, oddly_breakable_by_hand = 3, flamable = 1},
+		on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+			minetest.sound_play("FurElise.ogg", {
+		pos = {x = pos.x, y = pos.y, z = pos.z},
+		max_hear_distance = 30,
+		gain = 10.0,
+	end
+})
 })
