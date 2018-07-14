@@ -1017,3 +1017,19 @@ minetest.register_craft({
 			{"default:clay_lump"}
 			}
 		})
+
+-- Music Boxes --
+
+minetest.register_node("home_blocks:music_box",{
+		description = "Music Box",
+		tiles = {
+			"home_blocks_music_top.png",
+			"home_blocks_music_bottom.png",
+			"home_blocks_music_side2.png",
+			"home_blocks_music_side.png",
+			"home_blocks_music_side.png",
+			"home_blocks_music_side.png",
+},
+		is_ground_content = false,
+		groups = {choppy = 3, oddly_breakable_by_hand = 3, flamable = 1},
+})
