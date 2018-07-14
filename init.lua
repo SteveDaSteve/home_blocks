@@ -1023,6 +1023,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:music_box",{
 		description = "Music Box",
 		drawtype = "nodebox",
+		paramtype = "light",
+		paramtype2 = "facedir",
 		tiles = {
 			"home_blocks_music_top.png",
 			"home_blocks_music_bottom.png",
