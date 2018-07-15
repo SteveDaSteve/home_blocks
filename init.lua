@@ -1051,7 +1051,7 @@ minetest.register_node("home_blocks:music_box",{
 		gain = 10.0
 	})
 				else
-			local meta:set_meta("music", "off")
+			meta:set_meta("music", "off")
 			minetest.sound_stop(handle)
 	end
 			end
