@@ -1041,6 +1041,10 @@ minetest.register_node("home_blocks:music_box",{
 },
 		is_ground_content = false,
 		groups = {choppy = 3, oddly_breakable_by_hand = 3, flamable = 1},
+		on_construct = function(pos)
+			local meta = minetest.get_meta(pos)
+			meta:set_string("music","off")
+			end,
 		on_rightclick = function(pos, node, player, itemstack, pointed_thing)
 			local meta = minetest.get_meta(pos)
 			if not meta:get_string("music") then
