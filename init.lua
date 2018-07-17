@@ -1104,7 +1104,7 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 	}
 },
 		paramtype = light,
-		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory},
+		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
 		drop = "home_blocks_tiki_torch_bottom",
 		after_destruct = function(pos, oldnode)
 			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
