@@ -1060,3 +1060,53 @@ minetest.register_node("home_blocks:music_box",{
 	end
 			end
 })
+
+-- Tiki Torch --
+minetest.register_node("home_blocks:tiki_torch_bottom",{
+		description = "Tiki Torch",
+		tiles = {"home_blocks_tiki_torch_bottom.png"},
+		inventory_image = "home_blocks_tiki_torch_item.png",
+		wield_image = "home_blocks_tiki_torch_item.png",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.5000, 0.1875}
+	}
+},
+		paramtype = light,
+		groups = {oddly_breakable_by_hand = 2}
+		on_construct = function(pos)
+			minetest.set_node(x = pos.x, y = pos.y + 1, z = pos.z,{name = "home_blocks:tiki_torch_top"})
+			end,
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node(x = pos.x, y = pos.y + 1, z = pos.z)
+			end
+		})
+
+minetest.register_node("home_blocks:tiki_torch_top", {
+		description = "Tiki Torch Top (You should not have this!)",
+		drawtype = "nodebox",
+		light_source = 14,
+		tiles = {
+			"home_blocks_tiki_torch_coals.png",
+			"hoome_blocks_tiki_torch_bottom.png",
+			"home_blocks_tiki_torch_bowl.png",
+			"home_blocks_tiki_torch_bowl.png",
+			"home_blocks_tiki_torch_bowl.png",
+			"home_blocks_tiki_torch_bowl.png",
+},
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.1875, -0.5000, -0.1875, 0.1875, 0.000, 0.1875},
+		{-0.1875, 0.000, -0.1875, 0.2500, 0.1875, 0.2500}
+	}
+}
+		paramtype = light,
+		groups = {oddly_breakable_by_hand = 2},
+		drop = "home_blocks_tiki_torch_bottom",
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node(x = pos.x, y = pos.y - 1, z = pos.z)
+			end
+		})
