@@ -1077,7 +1077,7 @@ minetest.register_node("home_blocks:tiki_torch_bottom",{
 		paramtype = light,
 		groups = {oddly_breakable_by_hand = 2},
 		on_construct = function(pos)
-			minetest.set_node(x = pos.x, y = pos.y + 1, z = pos.z,{name = "home_blocks:tiki_torch_top"})
+			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:tiki_torch_top"})
 			end,
 		after_destruct = function(pos, oldnode)
 			minetest.remove_node(x = pos.x, y = pos.y + 1, z = pos.z)
