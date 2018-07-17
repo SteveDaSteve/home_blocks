@@ -1090,7 +1090,7 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 		light_source = 14,
 		tiles = {
 			"home_blocks_tiki_torch_coals.png",
-			"hoome_blocks_tiki_torch_bottom.png",
+			"home_blocks_tiki_torch_bottom.png",
 			"home_blocks_tiki_torch_bowl.png",
 			"home_blocks_tiki_torch_bowl.png",
 			"home_blocks_tiki_torch_bowl.png",
@@ -1100,11 +1100,11 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 	type = "fixed",
 	fixed = {
 		{-0.1875, -0.5000, -0.1875, 0.1875, 0.000, 0.1875},
-		{-0.1875, 0.000, -0.1875, 0.2500, 0.1875, 0.2500}
+		{-0.1875, 0.000, -0.1875, 0.3125, 0.1875, 0.3125}
 	}
 },
 		paramtype = light,
-		groups = {oddly_breakable_by_hand = 2},
+		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory},
 		drop = "home_blocks_tiki_torch_bottom",
 		after_destruct = function(pos, oldnode)
 			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
