@@ -651,7 +651,7 @@ for i in ipairs (carpets_table) do
    local color = carpets_table[i][2]
    local hex = carpets_table[i][3]
    
-minetest.register_node('home_blocks:carpets_'..color, {
+minetest.register_node('home_blocks:carpet_'..color, {
    description = name..' Carpet',
    drawtype = 'nodebox',
    tiles = {'home_blocks_'..color..'_carpet.png'},
