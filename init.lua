@@ -628,341 +628,44 @@ minetest.register_craft({
 
 --Carpets--
 
-minetest.register_node("home_blocks:red_carpet",{
-		description = "Red Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_red_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
+local carpets_table = { --name, color, colorize(hex or color name:intensity(1-255))
+{'Black', 'black', 'black:225'},
+{'Blue', 'blue', 'blue:225'},
+{'Brown', 'brown', 'brown:225'},
+{'Cyan', 'cyan', 'cyan:200'},
+{'Dark Green', 'dark_green', 'green:225'},
+{'Dark Grey', 'dark_grey', 'black:200'},
+{'Green', 'green', '#32cd32:150'},
+{'Grey', 'grey', 'black:100'},
+{'Magenta', 'magenta', 'magenta:200'},
+{'Orange', 'orange', 'orange:225'},
+{'Pink', 'pink', 'pink:225'},
+{'Red', 'red', 'red:225'},
+{'Violet', 'violet', 'violet:225'},
+{'White', 'white', 'white:1'},
+{'Yellow', 'yellow', 'yellow:225'},
+}
+
+for i in ipairs (carpets_table) do
+   local name = carpets_table[i][1]
+   local color = carpets_table[i][2]
+   local hex = carpets_table[i][3]
+   
+minetest.register_node('home_blocks:carpets_'..color, {
+   description = name..' Carpet',
+   drawtype = 'nodebox',
+   tiles = {'home_blocks_'..color..'_carpet.png'},
+   groups = {wool = 1, oddly_breakable_by_hand = 3},
+   --inventory_image = 'mp_sofa.png^[colorize:'..hex,
+   paramtype = "light",
+   node_box = {
+      type = "fixed",
+      fixed = {
+      {-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000},
+   },
 },
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:red_carpet 8",
-		recipe = {
-			{"wool:red","wool:red"}
-			}
-		})
-
-minetest.register_node("home_blocks:blue_carpet",{
-		description = "Blue Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_blue_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:red_carpet 8",
-		recipe = {
-			{"wool:blue","wool:blue"}
-			}
-		})
-
-minetest.register_node("home_blocks:yellow_carpet",{
-		description = "Yellow Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_yelllow_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:yellow_carpet 8",
-		recipe = {
-			{"wool:yellow","wool:yellow"}
-			}
-		})
-
-minetest.register_node("home_blocks:yellow_carpet",{
-		description = "Yellow Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_yellow_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:yellow_carpet 8",
-		recipe = {
-			{"wool:yellow","wool:yellow"}
-			}
-		})
-
-minetest.register_node("home_blocks:green_carpet",{
-		description = "Yellow Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_green_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:green_carpet 8",
-		recipe = {
-			{"wool:green","wool:green"}
-			}
-		})
-
-minetest.register_node("home_blocks:dark_green_carpet",{
-		description = "Dark Green Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_dark_green_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:dark_green_carpet 8",
-		recipe = {
-			{"wool:dark_green","wool:dark_green"}
-			}
-		})
-
-minetest.register_node("home_blocks:violet_carpet",{
-		description = "Violet Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_violet_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:violet_carpet 8",
-		recipe = {
-			{"wool:violet","wool:violet"}
-			}
-		})
-
-minetest.register_node("home_blocks:magenta_carpet",{
-		description = "Magenta Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_magenta_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:magenta_carpet 8",
-		recipe = {
-			{"wool:magenta","wool:magenta"}
-			}
-		})
-
-minetest.register_node("home_blocks:pink_carpet",{
-		description = "Pink Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_pink_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:pink_carpet 8",
-		recipe = {
-			{"wool:pink","wool:pink"}
-			}
-		})
-
-minetest.register_node("home_blocks:orange_carpet",{
-		description = "Orange Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_orange_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:orange_carpet 8",
-		recipe = {
-			{"wool:orange","wool:orange"}
-			}
-		})
-
-minetest.register_node("home_blocks:brown_carpet",{
-		description = "Brown Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_brown_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:brown_carpet 8",
-		recipe = {
-			{"wool:brown","wool:brown"}
-			}
-		})
-
-minetest.register_node("home_blocks:cyan_carpet",{
-		description = "Cyan Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_cyan_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:cyan_carpet 8",
-		recipe = {
-			{"wool:cyan","wool:cayn"}
-			}
-		})
-
-minetest.register_node("home_blocks:black_carpet",{
-		description = "Black Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_black_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:black_carpet 8",
-		recipe = {
-			{"wool:black","wool:black"}
-			}
-		})
-
-minetest.register_node("home_blocks:dark_grey_carpet",{
-		description = "Dark Grey Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_dark_grey_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:dark_grey_carpet 8",
-		recipe = {
-			{"wool:dark_grey","wool:dark_grey"}
-			}
-		})
-
-minetest.register_node("home_blocks:grey_carpet",{
-		description = "Grey Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_grey_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:grey_carpet 8",
-		recipe = {
-			{"wool:grey","wool:grey"}
-			}
-		})
-
-minetest.register_node("home_blocks:white_carpet",{
-		description = "White Carpet",
-		drawtype = "nodebox",
-		tiles = {"home_blocks_white_carpet.png"},
-		paramtype = "light",
-		node_box = {
-	type = "fixed",
-	fixed = {
-		{-0.5000, -0.5000, -0.5000, 0.5000, -0.4375, 0.5000}
-	}
-},
-		groups = {wool = 1, oddly_breakable_by_hand = 3}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:white_carpet 8",
-		recipe = {
-			{"wool:white","wool:white"}
-			}
-		})
+})
+end
 --Bonsais--
 minetest.register_node("home_blocks:green_bonsai",{
 		description = "Green Bonsai",
