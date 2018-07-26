@@ -805,7 +805,7 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 		{-0.1250, -0.5000, -0.1250, 0.1250, -0.1875, 0.1250},
 		{-0.1875, -0.1875, -0.1875, 0.1875, 0.1875, 0.1875}
 	}
-}},
+},
 		paramtype = light,
 		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
 		drop = "home_blocks_tiki_torch_bottom",
