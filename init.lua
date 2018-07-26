@@ -651,7 +651,7 @@ for i in ipairs (carpets_table) do
    local color = carpets_table[i][2]
    local hex = carpets_table[i][3]
    
-minetest.register_node('home_blocks:carpet_'..color, {
+minetest.register_node('home_blocks:'..color'carpet_', {
    description = name..' Carpet',
    drawtype = 'nodebox',
    tiles = {'home_blocks_'..color..'_carpet.png'},
@@ -803,9 +803,9 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 	type = "fixed",
 	fixed = {
 		{-0.1250, -0.5000, -0.1250, 0.1250, -0.1875, 0.1250},
-		{-0.1250, -0.1875, -0.1250, 0.2500, 0.1875, 0.2500}
+		{-0.1875, -0.1875, -0.1875, 0.1875, 0.1875, 0.1875}
 	}
-},
+}},
 		paramtype = light,
 		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
 		drop = "home_blocks_tiki_torch_bottom",
