@@ -809,22 +809,24 @@ minetest.register_node("home_blocks:brick_mese", {
 minetest.register_craft({
 		output = "home_blocks:brick_mese 4",
 		recipe = {
-			{"default:gold_ingot","default:gold_ingot"},
-			{"default:gold_ingot","default:gold_ingot"}
-			}
-		})
---X
-minetest.register_node("home_blocks:brick_gold", {
-		description = "Gold Brick",
-		tiles = {"home_blocks_brick_gold.png"},
-		groups = {cracky = 4}
-		})
-
-minetest.register_craft({
-		output = "home_blocks:brick_mese 4",
-		recipe = {
 			{"default:mese_crystal","default:mese_crystal"},
 			{"default:mese_crystal","default:mese_crystal"}
 			}
 		})
+
+--X
+minetest.register_node("home_blocks:brick_gold", {
+		description = "Gold Brick",
+		tiles = {"home_blocks_brick_gold.png"},
+		groups = {cracky = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:brick_gold 4",
+		recipe = {
+			{"default:gold_ingot","default:gold_ingot"},
+			{"default:gold_ingot","default:gold_ingot"}
+			}
+		})
+
 --X
