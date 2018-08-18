@@ -391,7 +391,7 @@ minetest.register_craft({
 			}
 		})
 
-minetest.register_node("home_blocks:copper_chandelier",{
+minetest.register_node("home_blocks:chandelier_copper",{
 		description = "Copper Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
@@ -414,14 +414,14 @@ minetest.register_node("home_blocks:copper_chandelier",{
 	})
 		
 minetest.register_craft({
-		output = "home_blocks:copper_chandelier",
+		output = "home_blocks:chandelier_copper",
 		recipe = {
 			{"","default:copper_ingot",""},
 			{"default:torch","default:copper_ingot","default:torch"}
 			}
 		})
 
-minetest.register_node("home_blocks:steel_chandelier",{
+minetest.register_node("home_blocks:chandelier_steel",{
 		description = "Steel Chandelier",
 		drawtype = "plantlike",
 		light_source = 14,
@@ -478,7 +478,7 @@ minetest.register_craft({
 			}
 		})
 
-minetest.register_node("home_blocks:copper_chain", {
+minetest.register_node("home_blocks:chain_copper", {
 		description = "Copper Chain",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_copper_chain.png"},
@@ -496,7 +496,7 @@ minetest.register_node("home_blocks:copper_chain", {
 		})
 
 minetest.register_craft({
-		output = "home_blocks:copper_chain",
+		output = "home_blocks:chain_copper",
 		recipe = {
 			{"default:copper_ingot"},
 			{"default:copper_ingot"},
@@ -504,7 +504,7 @@ minetest.register_craft({
 			}
 		})
 
-minetest.register_node("home_blocks:gold_chain", {
+minetest.register_node("home_blocks:chain_gold", {
 		description = "Gold Chain",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_gold_chain.png"},
@@ -651,7 +651,7 @@ for i in ipairs (carpets_table) do
    local color = carpets_table[i][2]
    local hex = carpets_table[i][3]
    
-minetest.register_node('home_blocks:'..color..'_carpet', {
+minetest.register_node('home_blocks:carpet_'..color, {
    description = name..' Carpet',
    drawtype = 'nodebox',
    tiles = {'home_blocks_'..color..'_carpet.png'},
@@ -686,7 +686,7 @@ minetest.register_craft({
 			}
 		})
 
-minetest.register_node("home_blocks:red_bonsai",{
+minetest.register_node("home_blocks:bonsai_red",{
 		description = "Red Bonsai",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_red_bonsai.png"},
@@ -697,7 +697,7 @@ minetest.register_node("home_blocks:red_bonsai",{
 		})
 
 minetest.register_craft({
-		output = "home_blocks:red_bonsai 2",
+		output = "home_blocks:bonsai_red 2",
 		recipe = {
 			{"wool:red"},
 			{"group:wood"},
@@ -705,7 +705,7 @@ minetest.register_craft({
 			}
 		})
 
-minetest.register_node("home_blocks:pink_bonsai",{
+minetest.register_node("home_blocks:bonsai_pink",{
 		description = "Pink Bonsai",
 		drawtype = "plantlike",
 		tiles = {"home_blocks_pink_bonsai.png"},
@@ -716,7 +716,7 @@ minetest.register_node("home_blocks:pink_bonsai",{
 		})
 
 minetest.register_craft({
-		output = "home_blocks:pink_bonsai 2",
+		output = "home_blocks:bonsai_pink 2",
 		recipe = {
 			{"wool:pink"},
 			{"group:wood"},
@@ -798,3 +798,33 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
 			end
 		})
+--Bricks--
+--X
+minetest.register_node("home_blocks:brick_mese", {
+		description = "Mese Brick",
+		tiles = {"home_blocks_brick_mese.png"},
+		groups = {cracky = 3}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:brick_mese 4",
+		recipe = {
+			{"default:gold_ingot","default:gold_ingot"},
+			{"default:gold_ingot","default:gold_ingot"}
+			}
+		})
+--X
+minetest.register_node("home_blocks:brick_gold", {
+		description = "Gold Brick",
+		tiles = {"home_blocks_brick_gold.png"},
+		groups = {cracky = 4}
+		})
+
+minetest.register_craft({
+		output = "home_blocks:brick_mese 4",
+		recipe = {
+			{"default:mese_crystal","default:mese_crystal"},
+			{"default:mese_crystal","default:mese_crystal"}
+			}
+		})
+--X
