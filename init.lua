@@ -881,6 +881,7 @@ minetest.register_node("home_blocks:fence_picket",{
 			"home_blocks_fence_picket_back.png",
 			"home_blocks_fence_picket_front.png",
 },
+		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
 })
