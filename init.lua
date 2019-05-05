@@ -853,3 +853,34 @@ minetest.register_craft({
 			{"default:paper","default:paper","default:paper"}
 		}
 	})
+
+--Picket Fence
+minetest.register_node("home_blocks:fence_picket",{
+		description = "Picket Fence",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.5000, -0.5000, -0.06250, 0.5000, 0.3125, 0.06250},
+		{-0.5000, 0.3125, -0.06250, -0.3125, 0.3750, 0.06250},
+		{-0.2500, 0.3125, -0.06250, -0.06250, 0.3750, 0.06250},
+		{0.000, 0.3125, -0.06250, 0.1875, 0.3750, 0.06250},
+		{0.2500, 0.3125, -0.06250, 0.4375, 0.3750, 0.06250},
+		{-0.4375, 0.3750, -0.06250, -0.3750, 0.4375, 0.06250},
+		{-0.1875, 0.3750, -0.06250, -0.1250, 0.4375, 0.06250},
+		{0.06250, 0.3750, -0.06250, 0.1250, 0.4375, 0.06250},
+		{0.3125, 0.3750, -0.06250, 0.3750, 0.4375, 0.06250},
+		{-0.5000, 0.000, -0.1250, 0.5000, 0.1250, -0.06250}
+	}
+},
+		tiles = {
+			"home_blocks_fence_picket_other.png",
+			"home_blocks_fence_picket_other.png",
+			"home_blocks_fence_picket_other.png",
+			"home_blocks_fence_picket_other.png",
+			"home_blocks_fence_picket_back.png",
+			"home_blocks_fence_picket_front.png",
+},
+		is_ground_content = false,
+		groups = {choppy = 2, flamable = 1},
+})
