@@ -830,3 +830,25 @@ minetest.register_craft({
 		})
 
 --X
+
+minetest.register_node("home_blocks:box_cardboard",{
+		description = "Cardboard Box",
+		tiles = {
+			"home_blocks_box_top.png",
+			"home_blocks_box_bottom.png",
+			"home_blocks_box_side1.png",
+			"home_blocks_box_side2.png",
+			"home_blocks_box_side1.png",
+			"home_blocks_box_side2.png",
+},
+		is_ground_content = false,
+		groups = {oddly_breakable_by_hand = 2, flamable = 1},
+})
+
+minetest.register_craft({
+		output = "home_blocks:box_cardboard",
+		recipe = {
+			{"default:paper","default:paper","default:paper"},
+			{"default:paper","","default:paper"},
+			{"default:paper","default:paper","default:paper"}
+		})
