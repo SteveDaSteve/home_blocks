@@ -851,5 +851,5 @@ minetest.register_craft({
 			{"default:paper","default:paper","default:paper"},
 			{"default:paper","","default:paper"},
 			{"default:paper","default:paper","default:paper"}
-		}
+		}}
 	})
