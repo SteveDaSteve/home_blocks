@@ -836,10 +836,10 @@ minetest.register_node("home_blocks:box_cardboard",{
 		tiles = {
 			"home_blocks_box_top.png",
 			"home_blocks_box_bottom.png",
-			"home_blocks_box_side1.png",
 			"home_blocks_box_side2.png",
 			"home_blocks_box_side1.png",
 			"home_blocks_box_side2.png",
+			"home_blocks_box_side1.png",
 },
 		is_ground_content = false,
 		groups = {oddly_breakable_by_hand = 2, flamable = 1},
