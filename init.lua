@@ -845,11 +845,11 @@ minetest.register_node("home_blocks:box_cardboard",{
 		groups = {oddly_breakable_by_hand = 2, flamable = 1},
 })
 
-minetest.register_craft({
-		output = "home_blocks:box_cardboard",
-		recipe = {
-			{"default:paper","default:paper","default:paper"},
-			{"default:paper","","default:paper"},
-			{"default:paper","default:paper","default:paper"}
-		}}
-	})
+--minetest.register_craft({
+--		output = "home_blocks:box_cardboard",
+--		recipe = {
+--			{"default:paper","default:paper","default:paper"},
+--			{"default:paper","","default:paper"},
+--			{"default:paper","default:paper","default:paper"}
+--		}
+--	})
