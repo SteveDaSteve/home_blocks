@@ -829,7 +829,7 @@ minetest.register_craft({
 			}
 		})
 
---X
+--Cardboard Box
 
 minetest.register_node("home_blocks:box_cardboard",{
 		description = "Cardboard Box",
@@ -884,4 +884,30 @@ minetest.register_node("home_blocks:fence_picket",{
 		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
+})
+
+--Fountain
+minetest.register_node("home_blocks:fountain",{
+		description = "Fountain",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.5000, -0.5000, -0.5000, 0.5000, -0.1875, 0.5000},
+		{-0.2500, -0.2500, -0.2500, 0.2500, 0.1875, 0.2500},
+		{-0.1250, 0.1875, -0.1250, 0.1250, 0.3750, 0.1250}
+	}
+},
+		tiles = {
+			{
+            name = "home_blocks_fountain_top.png",
+            animation = {
+                type     = "vertical_frames",
+                aspect_w = 10,
+                aspect_h = 10,
+                length   = .9
+            }
+        }
+},
+		is_ground_content = false,
+		groups = {cracky = 2,},
 })
