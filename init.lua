@@ -889,6 +889,7 @@ minetest.register_node("home_blocks:fence_picket",{
 --Fountain
 minetest.register_node("home_blocks:fountain",{
 		description = "Fountain",
+		drawtype = "nodebox",
 		node_box = {
 	type = "fixed",
 	fixed = {
