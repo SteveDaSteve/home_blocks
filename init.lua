@@ -908,7 +908,7 @@ minetest.register_node("home_blocks:fountain",{
             	}
        	 },
 			"home_blocks_fountain_bottom",
-					{
+			{
             	name = "home_blocks_fountain_sides.png",
             	animation = {
               	  type     = "vertical_frames",
@@ -917,7 +917,8 @@ minetest.register_node("home_blocks:fountain",{
                	 length   = .9
             	}
        	 },
-			            	name = "home_blocks_fountain_sides.png",
+			{
+		name = "home_blocks_fountain_sides.png",
             	animation = {
               	  type     = "vertical_frames",
               	  aspect_w = 10,
@@ -925,7 +926,8 @@ minetest.register_node("home_blocks:fountain",{
                	 length   = .9
             	}
        	 },
-		            	name = "home_blocks_fountain_sides.png",
+			{
+		name = "home_blocks_fountain_sides.png",
             	animation = {
               	  type     = "vertical_frames",
               	  aspect_w = 10,
@@ -933,7 +935,8 @@ minetest.register_node("home_blocks:fountain",{
                	 length   = .9
             	}
        	 },
-	            	name = "home_blocks_fountain_sides.png",
+			{
+	        name = "home_blocks_fountain_sides.png",
             	animation = {
               	  type     = "vertical_frames",
               	  aspect_w = 10,
