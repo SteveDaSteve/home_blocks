@@ -908,7 +908,7 @@ minetest.register_node("home_blocks:fountain",{
                	 length   = .9
             	}
        	 },
-			"home_blocks_fountain_bottom",
+			"home_blocks_fountain_bottom.png",
 			{
             	name = "home_blocks_fountain_sides.png",
             	animation = {
