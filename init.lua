@@ -898,15 +898,49 @@ minetest.register_node("home_blocks:fountain",{
 	}
 },
 		tiles = {
-			{
-            name = "home_blocks_fountain_top.png",
-            animation = {
-                type     = "vertical_frames",
-                aspect_w = 10,
-                aspect_h = 10,
-                length   = .9
-            }
-        }
+				{
+            	name = "home_blocks_fountain_top.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			"home_blocks_fountain_bottom",
+					{
+            	name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			            	name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+		            	name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+	            	name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
 },
 		is_ground_content = false,
 		groups = {cracky = 2,},
