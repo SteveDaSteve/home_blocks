@@ -949,3 +949,40 @@ minetest.register_node("home_blocks:fountain",{
 		is_ground_content = false,
 		groups = {cracky = 2,},
 })
+
+--Clock
+minetest.register_node("home_blocks:clock_tall",{
+		description = "Grandfather Clock",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.4375, -0.4375, -0.3125, 0.4375, 0.5625, 0.3125},
+		{-0.4375, 0.5000, -0.3125, 0.4375, 1.438, 0.3125},
+		{-0.4375, -0.5000, -0.3125, -0.3750, -0.4375, -0.2500},
+		{0.3750, -0.5000, -0.3125, 0.4375, -0.4375, -0.2500},
+		{-0.4375, -0.5000, 0.2500, -0.3750, -0.4375, 0.3125},
+		{0.3750, -0.5000, 0.2500, 0.4375, -0.4375, 0.3125},
+		{-0.3750, 0.5000, -0.3125, 0.3750, 1.500, 0.3125}
+	}
+},
+		tiles = {
+			"home_blocks_clock_tall_top.png",
+			"home_blocks_clock_tall_bottom.png",
+			"home_blocks_clock_tall_side.png",
+			"home_blocks_clock_tall_side.png",
+			"home_blocks_clock_tall_back.png",
+			{
+	        name = "home_blocks_clock_tall_front.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .4
+            	}
+       	 },
+},
+		paramtype2 = "facedir",
+		is_ground_content = false,
+		groups = {choppy = 2, flamable = 1},
+})
