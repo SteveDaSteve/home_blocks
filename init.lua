@@ -968,7 +968,7 @@ minetest.register_node("home_blocks:clock_tall",{
 },
 		tiles = {
 			"home_blocks_clock_tall_top.png",
-			"home_blocks_clock_tall_bottom.png",
+			"home_blocks_fountain_tall_bottom.png",
 			"home_blocks_clock_tall_side.png",
 			"home_blocks_clock_tall_side.png",
 			"home_blocks_clock_tall_back.png",
@@ -976,9 +976,9 @@ minetest.register_node("home_blocks:clock_tall",{
 	        name = "home_blocks_clock_tall_front.png",
             	animation = {
               	  type     = "vertical_frames",
-              	  aspect_w = 10,
-              	  aspect_h = 10,
-               	 length   = .4
+              	  aspect_w = 16,
+              	  aspect_h = 32,
+               	 length   = 1
             	}
        	 },
 },
