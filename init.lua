@@ -667,18 +667,18 @@ minetest.register_node('home_blocks:carpet_'..color, {
 })
 end
 --Bonsais--
-minetest.register_node("home_blocks:green_bonsai",{
+minetest.register_node("home_blocks:bonsai_green",{
 		description = "Green Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_green_bonsai.png"},
-		inventory_image = "home_blocks_green_bonsai.png",
+		tiles = {"home_blocks_bonsai_green.png"},
+		inventory_image = "home_blocks_bonsai_green.png",
 		walkable = false,
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
 
 minetest.register_craft({
-		output = "home_blocks:green_bonsai 2",
+		output = "home_blocks:bonsai_green 2",
 		recipe = {
 			{"wool:green"},
 			{"group:wood"},
@@ -689,8 +689,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:bonsai_red",{
 		description = "Red Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_red_bonsai.png"},
-		inventory_image = "home_blocks_red_bonsai.png",
+		tiles = {"home_blocks_bonsai_red.png"},
+		inventory_image = "home_blocks_bonsai_red.png",
 		walkable = false,
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
@@ -708,9 +708,9 @@ minetest.register_craft({
 minetest.register_node("home_blocks:bonsai_pink",{
 		description = "Pink Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_pink_bonsai.png"},
+		tiles = {"home_blocks_bonsai_pink.png"},
 		walkable = false,
-		inventory_image = "home_blocks_pink_bonsai.png",
+		inventory_image = "home_blocks_bonsai_pink.png",
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
