@@ -954,6 +954,7 @@ minetest.register_node("home_blocks:fountain",{
 minetest.register_node("home_blocks:clock_tall_bottom",{
 		description = "Grandfather Clock",
 		wield_image = "home_blocks_clock_tall_inv.png",
+		inventory_image = "home_blocks_clock_tall_inv.png",
 		drawtype = "nodebox",
 		node_box = {
 	type = "fixed",
@@ -984,7 +985,7 @@ minetest.register_node("home_blocks:clock_tall_bottom",{
 		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
-		on_construct = function(pos)
+		on_place = function(itemstack, placer, pointed_thing)
 			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:clock_tall_top"})
 			end,
 		after_destruct = function(pos, oldnode)
