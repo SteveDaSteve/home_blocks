@@ -951,33 +951,32 @@ minetest.register_node("home_blocks:fountain",{
 })
 
 --Clock
-minetest.register_node("home_blocks:clock_tall",{
+minetest.register_node("home_blocks:clock_tall_bottom",{
 		description = "Grandfather Clock",
+		wield_image = "home_blocks_clock_tall_inv.png",
 		drawtype = "nodebox",
 		node_box = {
 	type = "fixed",
 	fixed = {
 		{-0.4375, -0.4375, -0.3125, 0.4375, 0.5625, 0.3125},
-		{-0.4375, 0.5000, -0.3125, 0.4375, 1.438, 0.3125},
 		{-0.4375, -0.5000, -0.3125, -0.3750, -0.4375, -0.2500},
 		{0.3750, -0.5000, -0.3125, 0.4375, -0.4375, -0.2500},
 		{-0.4375, -0.5000, 0.2500, -0.3750, -0.4375, 0.3125},
 		{0.3750, -0.5000, 0.2500, 0.4375, -0.4375, 0.3125},
-		{-0.3750, 0.5000, -0.3125, 0.3750, 1.500, 0.3125}
 	}
 },
 		tiles = {
 			"home_blocks_clock_tall_top.png",
 			"home_blocks_fountain_bottom.png",
-			"home_blocks_clock_tall_side.png",
-			"home_blocks_clock_tall_side.png",
-			"home_blocks_clock_tall_back.png",
+			"home_blocks_clock_tall_side1.png",
+			"home_blocks_clock_tall_side1.png",
+			"home_blocks_clock_tall_back1.png",
 			{
-	        name = "home_blocks_clock_tall_front.png",
+	        name = "home_blocks_clock_tall_front1.png",
             	animation = {
               	  type     = "vertical_frames",
               	  aspect_w = 16,
-              	  aspect_h = 32,
+              	  aspect_h = 16,
                	 length   = 2
             	}
        	 },
@@ -985,4 +984,45 @@ minetest.register_node("home_blocks:clock_tall",{
 		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
+		on_construct = function(pos)
+			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:clock_tall_top"})
+			end,
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node({x = pos.x, y = pos.y + 1, z = pos.z})
+			end
+})
+
+minetest.register_node("home_blocks:clock_tall_top",{
+		description = "Grandfather Clock (Whatcha Got there?)",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.4375, -0.5000, -0.3125, 0.4375, 0.4375, 0.3125},
+		{-0.3750, 0.4375, -0.3125, 0.3750, 0.5000, 0.3125}
+	}
+},
+		tiles = {
+			"home_blocks_clock_tall_top.png",
+			"home_blocks_fountain_bottom.png",
+			"home_blocks_clock_tall_side2.png",
+			"home_blocks_clock_tall_side2.png",
+			"home_blocks_clock_tall_back2.png",
+			{
+	        name = "home_blocks_clock_tall_front2.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 16,
+              	  aspect_h = 16,
+               	 length   = 2
+            	}
+       	 },
+},
+		paramtype2 = "facedir",
+		is_ground_content = false,
+		groups = {choppy = 2, flamable = 1, not_in_creative_inventory = 1},
+		drops = "home_blocks:clock_tall_bottom",
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
+			end
 })
