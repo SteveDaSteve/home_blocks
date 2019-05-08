@@ -978,7 +978,7 @@ minetest.register_node("home_blocks:clock_tall",{
               	  type     = "vertical_frames",
               	  aspect_w = 16,
               	  aspect_h = 32,
-               	 length   = 1
+               	 length   = 2
             	}
        	 },
 },
