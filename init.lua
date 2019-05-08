@@ -968,7 +968,7 @@ minetest.register_node("home_blocks:clock_tall",{
 },
 		tiles = {
 			"home_blocks_clock_tall_top.png",
-			"home_blocks_fountain_tall_bottom.png",
+			"home_blocks_fountain_bottom.png",
 			"home_blocks_clock_tall_side.png",
 			"home_blocks_clock_tall_side.png",
 			"home_blocks_clock_tall_back.png",
