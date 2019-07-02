@@ -988,8 +988,8 @@ minetest.register_node("home_blocks:clock_tall_bottom",{
 		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
-		on_place = function(itemstack, placer, pointed_thing)
-			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:clock_tall_top"})
+		on_construct = function(pos)
+			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:clock_tall_bottom"})
 			end,
 		after_destruct = function(pos, oldnode)
 			minetest.remove_node({x = pos.x, y = pos.y + 1, z = pos.z})
