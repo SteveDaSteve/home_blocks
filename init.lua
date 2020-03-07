@@ -889,6 +889,14 @@ minetest.register_node("home_blocks:fence_picket",{
 		groups = {choppy = 2, flamable = 1},
 })
 
+minetest.register_craft({
+		output = "home_blocks:fence_picket 4",
+		recipe = {
+			{"default:wood","default:stick","default:wood"},
+			{"default:wood","","default:wood"},
+			{"default:wood","","default:wood"}
+		}
+	})
 --Fountain
 minetest.register_node("home_blocks:fountain",{
 		description = "Fountain",
@@ -953,7 +961,24 @@ minetest.register_node("home_blocks:fountain",{
 		groups = {cracky = 2,},
 })
 
+minetest.register_craft({
+		output = "home_blocks:fountain",
+		recipe = {
+			{"","default:bucket_water",""},
+			{"","group:stone",""},
+			{"group:stone","dgroup:stone","group:stone"}
+		}
+	})
+minetest.register_craft({
+		output = "home_blocks:fountain",
+		recipe = {
+			{"","default:bucket_river_water",""},
+			{"","group:stone",""},
+			{"group:stone","dgroup:stone","group:stone"}
+		}
+	})
 --Clock
+--[[
 minetest.register_node("home_blocks:clock_tall_bottom",{
 		description = "Grandfather Clock",
 		wield_image = "home_blocks_clock_tall_inv.png",
@@ -1030,3 +1055,4 @@ minetest.register_node("home_blocks:clock_tall_top",{
 			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
 			end
 })
+--]]
