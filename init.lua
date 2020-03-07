@@ -231,6 +231,7 @@ minetest.register_node("home_blocks:wood_table",{
       "home_blocks_wood_table_lags.png",
       "home_blocks_wood_table_lags.png"
    },
+	paramtype = "light",
       groups = {wood = 1, choppy = 1},
       node_box = {
       type = "fixed",
@@ -712,18 +713,18 @@ minetest.register_node('home_blocks:carpet_'..color, {
 })
 end
 --Bonsais--
-minetest.register_node("home_blocks:green_bonsai",{
+minetest.register_node("home_blocks:bonsai_green",{
 		description = "Green Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_green_bonsai.png"},
-		inventory_image = "home_blocks_green_bonsai.png",
+		tiles = {"home_blocks_bonsai_green.png"},
+		inventory_image = "home_blocks_bonsai_green.png",
 		walkable = false,
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
 
 minetest.register_craft({
-		output = "home_blocks:green_bonsai 2",
+		output = "home_blocks:bonsai_green 2",
 		recipe = {
 			{"wool:green"},
 			{"group:wood"},
@@ -734,8 +735,8 @@ minetest.register_craft({
 minetest.register_node("home_blocks:bonsai_red",{
 		description = "Red Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_red_bonsai.png"},
-		inventory_image = "home_blocks_red_bonsai.png",
+		tiles = {"home_blocks_bonsai_red.png"},
+		inventory_image = "home_blocks_bonsai_red.png",
 		walkable = false,
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
@@ -753,9 +754,9 @@ minetest.register_craft({
 minetest.register_node("home_blocks:bonsai_pink",{
 		description = "Pink Bonsai",
 		drawtype = "plantlike",
-		tiles = {"home_blocks_pink_bonsai.png"},
+		tiles = {"home_blocks_bonsai_pink.png"},
 		walkable = false,
-		inventory_image = "home_blocks_pink_bonsai.png",
+		inventory_image = "home_blocks_bonsai_pink.png",
 		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 3}
 		})
@@ -807,7 +808,7 @@ minetest.register_node("home_blocks:tiki_torch_bottom",{
 		{-0.1250, -0.5000, -0.1250, 0.1250, 0.5000, 0.1250}
 	}
 },
-		paramtype = light,
+		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 2},
 		on_construct = function(pos)
 			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:tiki_torch_top"})
@@ -836,7 +837,7 @@ minetest.register_node("home_blocks:tiki_torch_top", {
 		{-0.1875, -0.1875, -0.1875, 0.1875, 0.1875, 0.1875}
 	}
 },
-		paramtype = light,
+		paramtype = "light",
 		groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
 		drop = "home_blocks_tiki_torch_bottom",
 		after_destruct = function(pos, oldnode)
@@ -902,6 +903,7 @@ minetest.register_craft({
 			}
 		})
 
+--Cardboard Box
 minetest.register_node("home_blocks:brick_gold_stair",{
 		description = "Gold Brick Stair",
 		paramtype = "light",
@@ -934,6 +936,7 @@ minetest.register_node("home_blocks:gold_brick_stair_inner",{
 
 minetest.register_node("home_blocks:box_cardboard",{
 		description = "Cardboard Box",
+		paramtype = "light",
 		tiles = {
 			"home_blocks_box_top.png",
 			"home_blocks_box_bottom.png",
@@ -982,7 +985,176 @@ minetest.register_node("home_blocks:fence_picket",{
 			"home_blocks_fence_picket_back.png",
 			"home_blocks_fence_picket_front.png",
 },
+		paramtype = "light",
 		paramtype2 = "facedir",
 		is_ground_content = false,
 		groups = {choppy = 2, flamable = 1},
 })
+
+minetest.register_craft({
+		output = "home_blocks:fence_picket 4",
+		recipe = {
+			{"default:wood","default:stick","default:wood"},
+			{"default:wood","","default:wood"},
+			{"default:wood","","default:wood"}
+		}
+	})
+--Fountain
+minetest.register_node("home_blocks:fountain",{
+		description = "Fountain",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.5000, -0.5000, -0.5000, 0.5000, -0.2500, 0.5000},
+		{-0.2500, -0.3125, -0.2500, 0.2500, 0.1250, 0.2500},
+		{-0.1250, 0.1250, -0.1250, 0.1250, 0.3125, 0.1250}
+	}
+},
+		tiles = {
+				{
+            	name = "home_blocks_fountain_top.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			"home_blocks_fountain_bottom.png",
+			{
+            	name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			{
+		name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			{
+		name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+			{
+	        name = "home_blocks_fountain_sides.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 10,
+              	  aspect_h = 10,
+               	 length   = .9
+            	}
+       	 },
+},
+		is_ground_content = false,
+		groups = {cracky = 2,},
+})
+
+minetest.register_craft({
+		output = "home_blocks:fountain",
+		recipe = {
+			{"","default:bucket_water",""},
+			{"","group:stone",""},
+			{"group:stone","dgroup:stone","group:stone"}
+		}
+	})
+minetest.register_craft({
+		output = "home_blocks:fountain",
+		recipe = {
+			{"","default:bucket_river_water",""},
+			{"","group:stone",""},
+			{"group:stone","dgroup:stone","group:stone"}
+		}
+	})
+--Clock
+--[[
+minetest.register_node("home_blocks:clock_tall_bottom",{
+		description = "Grandfather Clock",
+		wield_image = "home_blocks_clock_tall_inv.png",
+		inventory_image = "home_blocks_clock_tall_inv.png",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.4375, -0.4375, -0.3125, 0.4375, 0.5625, 0.3125},
+		{-0.4375, -0.5000, -0.3125, -0.3750, -0.4375, -0.2500},
+		{0.3750, -0.5000, -0.3125, 0.4375, -0.4375, -0.2500},
+		{-0.4375, -0.5000, 0.2500, -0.3750, -0.4375, 0.3125},
+		{0.3750, -0.5000, 0.2500, 0.4375, -0.4375, 0.3125},
+	}
+},
+		tiles = {
+			"home_blocks_clock_tall_top.png",
+			"home_blocks_fountain_bottom.png",
+			"home_blocks_clock_tall_side1.png",
+			"home_blocks_clock_tall_side1.png",
+			"home_blocks_clock_tall_back1.png",
+			{
+	        name = "home_blocks_clock_tall_front1.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 16,
+              	  aspect_h = 16,
+               	 length   = 2
+            	}
+       	 },
+},
+		paramtype2 = "facedir",
+		is_ground_content = false,
+		groups = {choppy = 2, flamable = 1},
+		on_construct = function(pos)
+			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "home_blocks:clock_tall_top"})
+			end,
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node({x = pos.x, y = pos.y + 1, z = pos.z})
+			end
+})
+
+minetest.register_node("home_blocks:clock_tall_top",{
+		description = "Grandfather Clock (Whatcha Got there?)",
+		drawtype = "nodebox",
+		node_box = {
+	type = "fixed",
+	fixed = {
+		{-0.4375, -0.5000, -0.3125, 0.4375, 0.4375, 0.3125},
+		{-0.3750, 0.4375, -0.3125, 0.3750, 0.5000, 0.3125}
+	}
+},
+		tiles = {
+			"home_blocks_clock_tall_top.png",
+			"home_blocks_fountain_bottom.png",
+			"home_blocks_clock_tall_side2.png",
+			"home_blocks_clock_tall_side2.png",
+			"home_blocks_clock_tall_back2.png",
+			{
+	        name = "home_blocks_clock_tall_front2.png",
+            	animation = {
+              	  type     = "vertical_frames",
+              	  aspect_w = 16,
+              	  aspect_h = 16,
+               	 length   = 2
+            	}
+       	 },
+},
+		paramtype2 = "facedir",
+		is_ground_content = false,
+		groups = {choppy = 2, flamable = 1, not_in_creative_inventory = 1},
+		drops = "home_blocks:clock_tall_bottom",
+		after_destruct = function(pos, oldnode)
+			minetest.remove_node({x = pos.x, y = pos.y - 1, z = pos.z})
+			end
+})
+--]]
