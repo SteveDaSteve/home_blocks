@@ -147,23 +147,23 @@ minetest.register_craft({
 			}
 })
 
-minetest.register_node("home_blocks:ice_brick",{
+-- Ice Brick -- 
+minetest.register_node("home_blocks:brick_ice",{
 		description = "Ice Brick",
 		tiles = {"home_blocks_ice_brick.png"},
 		groups = {cracky = 1}
 	})
 		
 minetest.register_craft({
-		output = "home_blocks:ice_brick 6",
+		output = "home_blocks:brick_ice 4",
 		recipe = {
-			{"default:ice","default:ice","default:ice"},
-			{"default:ice","default:ice","default:ice"},
-			{"default:ice","default:ice","default:ice"},
+			{"default:ice","default:ice"},
+			{"default:ice","default:ice"}
 		}
 })
 
-minetest.register_node("home_blocks:half_ice_brick",{
-		description = "Ice Brick Slab",
+minetest.register_node("home_blocks:brick_ice_stair",{
+		description = "Ice Brick Stair",
 		paramtype = "light",
 		drawtype = "nodebox",
 		tiles = {"home_blocks_ice_brick.png"},
@@ -171,8 +171,53 @@ minetest.register_node("home_blocks:half_ice_brick",{
 			type = "fixed",
 			fixed = {
             {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+            {-0.5, 0, 0, 0.5, 0.5, 0.5}
         }},
 		groups = {cracky = 1}
+	})
+
+minetest.register_node("home_blocks:brick_ice_stair_inner",{
+		description = "Inner Ice Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.5, 0.5, 0.5},
+				{-0.5, 0.0, -0.5, 0.0, 0.5, 0.0},
+        }},
+		groups = {cracky = 1}
+	})
+minetest.register_craft({
+		output = "home_blocks:brick_ice_stair_inner 8",
+		recipe = {
+			{"","home_blocks:brick_ice",""},
+			{"home_blocks:brick_ice","","home_blocks:brick_ice"},
+			{"home_blocks:brick_ice","home_blocks:brick_ice","home_blocks:brick_ice"}
+		}
+	})
+
+minetest.register_node("home_blocks:brick_ice_stair_outer",{
+		description = "Outer Ice Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.0, 0.5, 0.5},
+        }},
+		groups = {cracky = 1}
+	})
+minetest.register_craft({
+		output = "home_blocks:brick_ice_stair_outer 8",
+		recipe = {
+			{"","home_blocks:brick_ice",""},
+			{"home_blocks:brick_ice","home_blocks:brick_ice","home_blocks:brick_ice"}
+			}
 	})
 
 minetest.register_node("home_blocks:wood_table",{
@@ -813,6 +858,34 @@ minetest.register_craft({
 			{"default:mese_crystal","default:mese_crystal"}
 			}
 		})
+minetest.register_node("home_blocks:brick_mese_stair",{
+		description = "Mese Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+            {-0.5, 0, 0, 0.5, 0.5, 0.5}
+        }},
+		groups = {cracky = 1}
+	})
+
+minetest.register_node("home_blocks:mese_brick_stair_inner",{
+		description = "Inner Mese Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.5, 0.5, 0.5},
+				{-0.5, 0.0, -0.5, 0.0, 0.5, 0.0},
+        }},
+		groups = {cracky = 1}
+	})
 
 --X
 minetest.register_node("home_blocks:brick_gold", {
@@ -829,6 +902,34 @@ minetest.register_craft({
 			}
 		})
 
+minetest.register_node("home_blocks:brick_gold_stair",{
+		description = "Gold Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+            {-0.5, 0, 0, 0.5, 0.5, 0.5}
+        }},
+		groups = {cracky = 1}
+	})
+
+minetest.register_node("home_blocks:gold_brick_stair_inner",{
+		description = "Inner Gold Brick Stair",
+		paramtype = "light",
+		drawtype = "nodebox",
+		tiles = {"home_blocks_ice_brick.png"},
+		node_box = {
+			type = "fixed",
+			fixed = {
+				{-0.5, -0.5, -0.5, 0.5, 0.0, 0.5},
+				{-0.5, 0.0, 0.0, 0.5, 0.5, 0.5},
+				{-0.5, 0.0, -0.5, 0.0, 0.5, 0.0},
+        }},
+		groups = {cracky = 1}
+	})
 --X
 
 minetest.register_node("home_blocks:box_cardboard",{
